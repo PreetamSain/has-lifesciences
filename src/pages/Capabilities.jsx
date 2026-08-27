@@ -112,11 +112,9 @@ export default function Capabilities() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 02 • DOSAGE INDEX"
-          badge="MANUFACTURING PLATFORMS"
           headlineMain="Validated Dosage Platforms."
           description="A comprehensive overview of our specialized manufacturing suites — engineered to scale complex botanical formulations from laboratory prototypes into commercial high-speed production."
-          primaryBtnText="Explore All Platforms"
+          primaryBtnText="Explore Platforms"
           primaryBtnLink="#extraction"
           secondaryBtnText="Submit Formulation Brief"
           secondaryBtnLink="/partner"
@@ -132,13 +130,6 @@ export default function Capabilities() {
             id={p.id}
             className="border-t border-slate-300 pt-16 scroll-mt-32"
           >
-            {/* Header Line */}
-            <div className="flex items-center gap-6 border-b border-slate-200 pb-4 mb-12">
-              <span className="monogram-badge">
-                PLATFORM {p.num} • {p.code}
-              </span>
-              <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">SPECIFICATION SHEET</span>
-            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
               
@@ -196,10 +187,6 @@ export default function Capabilities() {
                       alt={p.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-95"
                     />
-                  </div>
-                  <div className="p-8 bg-[#030914] text-white flex items-center justify-between font-architekt text-xs border-t border-white/10">
-                    <span className="text-[#00D2FF] font-bold">PLATFORM {p.num} • {p.code}</span>
-                    <span className="text-white/60">cGMP QUALIFIED</span>
                   </div>
                 </div>
               </div>

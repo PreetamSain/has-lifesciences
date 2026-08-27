@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function GinkgoHeroCard({
-  tag = 'SECTION • OVERVIEW',
-  badge = 'SPECIFICATION',
+  tag = '',
+  badge = '',
   headlineMain = 'Title',
   headlineSub = '',
   description = '',
@@ -14,7 +14,7 @@ export default function GinkgoHeroCard({
   bgImage = ''
 }) {
   return (
-    <div className="relative w-full rounded-[44px] bg-[#030914] text-white overflow-hidden p-8 sm:p-14 md:p-20 shadow-2xl border border-slate-800 min-h-[560px] flex flex-col justify-between">
+    <div className="relative w-full rounded-[44px] bg-[#030914] text-white overflow-hidden p-8 sm:p-14 md:p-20 shadow-2xl border border-slate-800 min-h-[500px] flex flex-col justify-between">
       
       {/* Background Image with Dark Vignette */}
       {bgImage && (
@@ -31,19 +31,25 @@ export default function GinkgoHeroCard({
       <div className="absolute inset-0 blueprint-grid-dark opacity-30 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-[#030914]/60 pointer-events-none" />
 
-      {/* Top Ticker & Monogram Badge */}
-      <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 font-architekt text-xs uppercase tracking-[0.2em] text-white/80 border-b border-white/15 pb-6">
-        <div className="flex items-center gap-3">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#00D2FF] shadow-[0_0_10px_#00D2FF] animate-pulse" />
-          <span className="font-bold text-white">{tag}</span>
+      {/* Optional Clean Category Label (Only if provided) */}
+      {(tag || badge) ? (
+        <div className="relative z-10 flex items-center justify-between gap-4 font-architekt text-xs uppercase tracking-[0.2em] text-white/80 border-b border-white/15 pb-6">
+          {tag && (
+            <div className="flex items-center gap-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#00D2FF] shadow-[0_0_10px_#00D2FF]" />
+              <span className="font-bold text-white">{tag}</span>
+            </div>
+          )}
+          {badge && (
+            <span className="text-white/60 text-[11px] font-architekt uppercase tracking-widest">
+              {badge}
+            </span>
+          )}
         </div>
-        <span className="monogram-badge-dark py-1 px-3.5 text-[10px]">
-          {badge}
-        </span>
-      </div>
+      ) : <div />}
 
       {/* Center Main Content */}
-      <div className="relative z-10 my-10 max-w-5xl space-y-6">
+      <div className="relative z-10 my-8 max-w-5xl space-y-6">
         <h1 className="font-architekt text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] text-white tracking-[-0.01em] leading-[0.96] uppercase">
           {headlineMain}
           {headlineSub && (

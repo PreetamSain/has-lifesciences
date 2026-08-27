@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, ShieldCheck, CheckCircle2, Award, Zap, 
-  FlaskConical, Sparkles, Building2, Microchip, Layers, 
-  Activity, RefreshCw, BarChart3, Database, Globe, ChevronRight, Dna, Factory,
-  ChevronDown, HelpCircle
+  FlaskConical, 
+  Layers, 
+  Sparkles, 
+  Award, 
+  ArrowRight,
+  ShieldCheck,
+  CheckCircle2,
+  ChevronDown
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -16,69 +20,57 @@ export default function Home() {
   const platforms = [
     {
       num: '01',
-      code: 'EXT-VAC',
-      title: 'Botanical Extraction Hall',
-      category: 'Phytochemistry & Active Standardization',
-      desc: 'Falling-film vacuum evaporators and fractional crystallization targeting high-potency standardized phytochemical markers.',
-      spec: 'HPLC ≥95% Purity Standard',
+      title: 'Botanical Extraction & Phyto-Actives',
+      category: 'Phytochemistry & Standardization',
+      desc: 'Falling-film vacuum extraction, low-temperature concentration, and chromatographic marker standardization.',
+      spec: 'HPLC Assays • Withanolides • Curcuminoids',
       image: '/assets/generated/has_botanical_extraction_1787739370349.jpg',
-      link: '/capabilities#extraction',
-      badge: 'Core Infrastructure'
+      link: '/capabilities#extraction'
     },
     {
       num: '02',
-      code: 'ENCAP-SG',
-      title: 'Rotary Softgel Encapsulation',
-      category: 'Lipid Solutions & Oil Suspensions',
-      desc: 'High-speed rotary die encapsulation for CoQ10, omega fatty acids, phytosterols, and specialized lipid-soluble botanical extracts.',
-      spec: 'Seamless Gelatin / Veg-Cap',
+      title: 'Rotary Die Softgel Encapsulation',
+      category: 'Lipid & Oil Formulations',
+      desc: 'Precision rotary die encapsulation for omega oils, fat-soluble vitamins, and botanical lipid emulsions.',
+      spec: 'Gelatin & Plant Veggie Shells • Seamless Sealing',
       image: '/assets/generated/has_softgels_macro_1787739287054.jpg',
-      link: '/capabilities#softgels',
-      badge: 'High Precision'
+      link: '/capabilities#softgels'
     },
     {
       num: '03',
-      code: 'GUM-PUD',
-      title: 'Pectin & Gelatin Gummy Line',
-      category: 'Confectionery Nutraceuticals',
-      desc: 'Starchless mogul depositor technology engineered for thermal-stability and active botanical load without sugar degradation.',
-      spec: 'Sugar-Free & 100% Pectin',
+      title: 'Pectin & Gelatin Functional Gummies',
+      category: 'Nutraceutical Confectionery',
+      desc: 'Clean-label 100% citrus pectin gummies engineered with thermo-tolerant active blending and natural fruit flavors.',
+      spec: '100% Vegan Pectin • Sugar-Free Available',
       image: '/assets/generated/has_gummies_macro_1787739307098.jpg',
-      link: '/capabilities#gummies',
-      badge: 'Rapid Growth'
+      link: '/capabilities#gummies'
     },
     {
       num: '04',
-      code: 'EFF-TAB',
-      title: 'Effervescent Technology',
-      category: 'Rapid Bioavailability Systems',
-      desc: 'Desiccant-controlled low-humidity cleanrooms (<20% RH) ensuring instant effervescence and complete mineral-botanical solubility.',
-      spec: '<20% RH Dry Suite',
+      title: 'Low-Humidity Effervescent Tablets',
+      category: 'Fast Dissolution Delivery',
+      desc: 'Specialized low-humidity manufacturing (<20% RH) ensuring rapid effervescence, zero residue, and high bioavailability.',
+      spec: '<20% RH Controlled Suites • Tube Packaging',
       image: '/assets/generated/has_effervescent_macro_1787820101278.jpg',
-      link: '/capabilities#effervescents',
-      badge: 'Bio-Enhanced'
+      link: '/capabilities#effervescent'
     },
     {
       num: '05',
-      code: 'SOL-TAB',
-      title: 'Tablets & Bilayer Solids',
-      category: 'Controlled Release Delivery',
-      desc: 'High-tonnage rotary presses with auto-weight rejection for modified-release bilayers, enteric coatings, and multi-herb matrices.',
-      spec: 'Multi-Coating & Bilayer',
+      title: 'Solid Oral & Bilayer Tablets',
+      category: 'High-Speed Compression',
+      desc: 'High-speed rotary tablet compression with enteric and aqueous film coating for targeted sustained release.',
+      spec: 'Bilayer Technology • Moisture-Barrier Coating',
       image: '/assets/generated/has_tablets_macro_1787820225149.jpg',
-      link: '/capabilities#solids',
-      badge: 'High Volume'
+      link: '/capabilities#tablets'
     },
     {
       num: '06',
-      code: 'LIQ-BOT',
-      title: 'Ayurvedic Syrups & Tonics',
-      category: 'Classical & Modern Hydro-Extracts',
-      desc: 'Stainless steel SS316 closed-loop brewing vessels for decoctions, classical kwaths, self-generated asavas, and modern nano-syrups.',
-      spec: 'SS316 Closed Vessels',
+      title: 'Classical Ayurvedic Liquids & Decoctions',
+      category: 'Classical Pharmacology',
+      desc: 'Authentic stainless-steel steam-jacketed decoctions (Kwath), fresh juice extracts (Swaras), and standardized syrups.',
+      spec: 'Class 10k Aseptic Bottling • Amber Glass & HDPE',
       image: '/assets/generated/has_ayurvedic_liquid_1787820189306.jpg',
-      link: '/capabilities#traditional',
-      badge: 'Heritage & Science'
+      link: '/capabilities#traditional'
     }
   ];
 
@@ -91,9 +83,9 @@ export default function Home() {
       />
       
       {/* ========================================================================= */}
-      {/* SECTION 00: CINEMATIC FULL-SCREEN HERO (SINGLE 4K IMAGE)                  */}
+      {/* HERO SECTION                                                              */}
       {/* ========================================================================= */}
-      <section id="section-hero" className="relative w-full min-h-screen bg-[#030914] text-white flex flex-col justify-between pt-32 pb-16 px-6 md:px-16 overflow-hidden">
+      <section id="section-hero" className="relative w-full min-h-screen bg-[#030914] text-white flex flex-col justify-between pt-32 pb-12 px-6 md:px-16 overflow-hidden">
         
         {/* 4K Background Cleanroom Visual */}
         <img
@@ -108,27 +100,11 @@ export default function Home() {
         <div className="absolute inset-0 blueprint-grid-dark opacity-30 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-[#030914]/80 pointer-events-none" />
 
-        {/* Top Header Row */}
-        <div className="relative z-10 max-w-[1800px] mx-auto w-full pt-4">
-          <div className="flex flex-wrap items-center justify-between gap-4 font-architekt text-xs uppercase tracking-[0.2em] text-white/80 border-b border-white/15 pb-4">
-            <div className="flex items-center gap-3">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00D2FF] shadow-[0_0_12px_#00D2FF] animate-pulse" />
-              <span className="font-bold text-white">THE SCIENCE OF BOTANICALS. THE BUSINESS OF DISCOVERY.</span>
-            </div>
-            <div className="text-white/60 text-xs font-architekt uppercase tracking-widest">STATE-OF-THE-ART CDMO CAMPUS</div>
-          </div>
-        </div>
-
         {/* Hero Center Typography */}
         <div className="relative z-10 max-w-[1800px] mx-auto w-full my-auto py-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
             
             <div className="lg:col-span-8 space-y-6">
-              <div className="monogram-badge-dark">
-                <Dna className="w-3.5 h-3.5 text-[#00D2FF]" />
-                <span>INTEGRATED CDMO PLATFORM</span>
-              </div>
-
               <h1 className="font-architekt text-6xl sm:text-7xl md:text-8xl lg:text-[116px] xl:text-[132px] text-white tracking-[0.02em] leading-[0.88] uppercase select-none">
                 NATURE.<br />
                 SCIENCE.<br />
@@ -142,7 +118,7 @@ export default function Home() {
               </div>
 
               <p className="font-telegraf text-slate-200 text-lg sm:text-xl md:text-2xl leading-[1.6] font-normal">
-                Building India's premier integrated CDMO for standardized botanical extraction, classical Ayurveda, and advanced nutraceutical delivery systems.
+                India's premier integrated CDMO for standardized botanical extraction, classical Ayurveda, and advanced nutraceutical delivery systems.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -166,31 +142,25 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Hero Bottom Metric Strip */}
-        <div className="relative z-10 max-w-[1800px] mx-auto w-full border-t border-white/15 pt-6 font-architekt text-xs text-white/60 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-[#00D2FF]">●</span>
-            <span>CAMPUS: ~78,000 SQ. FT. MULTI-LEVEL PLATFORM</span>
+        {/* Hero Bottom Bar */}
+        <div className="relative z-10 max-w-[1800px] mx-auto w-full border-t border-white/15 pt-6 font-architekt text-xs text-white/70 flex items-center justify-between">
+          <div>JAIPUR, RAJASTHAN, INDIA</div>
+          <div className="text-[#00D2FF] font-bold flex items-center gap-2">
+            <span>EXPLORE</span>
+            <ChevronDown className="w-4 h-4 animate-bounce" />
           </div>
-          <div className="text-[11px]">STANDARDS: cGMP • HPLC ASSAYS • CLASS 10,000 CLEANROOMS</div>
-          <div className="text-[#00D2FF] font-bold">SCROLL DOWN TO EXPLORE ↓</div>
         </div>
 
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 01: THE BOTANICAL EVOLUTION                                       */}
+      {/* THE BOTANICAL EVOLUTION                                                   */}
       {/* ========================================================================= */}
       <section id="section-evolution" className="relative py-32 md:py-44 px-6 md:px-16 bg-[#F8FAFC] blueprint-grid-light border-b border-slate-200">
         
         {/* Section Header */}
         <div className="max-w-[1800px] mx-auto mb-20">
-          <div className="flex items-center gap-6 border-b border-slate-300 pb-4">
-            <span className="monogram-badge">SECTION 01 • THE BOTANICAL EVOLUTION</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">STRATEGIC REBRANDING</span>
-          </div>
-
-          <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-[#030914] tracking-tight leading-[0.96] uppercase mt-8">
+          <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-[#030914] tracking-tight leading-[0.96] uppercase">
             The Botanical Evolution
           </h2>
         </div>
@@ -221,20 +191,19 @@ export default function Home() {
                 to="/about"
                 className="colossal-big-button"
               >
-                <span>Read Our Evolution Story</span>
+                <span>Read Our Story</span>
                 <span className="plus-icon">+</span>
               </Link>
             </div>
           </div>
 
-          {/* Right Column: 4 Strategic Pillars */}
+          {/* Right Column: 4 Strategic Features */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
             
             <div className="glass-light glass-card-hover p-10 rounded-[36px] space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-[#0052FF]/10 text-[#0052FF] flex items-center justify-center">
                 <FlaskConical className="w-6 h-6" />
               </div>
-              <div className="font-architekt text-xs uppercase text-[#0052FF] font-bold tracking-widest">PILLAR 01</div>
               <h4 className="font-architekt font-bold text-2xl text-[#030914]">Standardized Phyto-Assays</h4>
               <p className="font-telegraf text-slate-600 text-sm leading-relaxed">
                 HPLC, HPTLC, and LC-MS validated extraction ensuring active marker concentrations are batch-consistent.
@@ -245,7 +214,6 @@ export default function Home() {
               <div className="w-12 h-12 rounded-2xl bg-[#0052FF]/10 text-[#0052FF] flex items-center justify-center">
                 <Layers className="w-6 h-6" />
               </div>
-              <div className="font-architekt text-xs uppercase text-[#0052FF] font-bold tracking-widest">PILLAR 02</div>
               <h4 className="font-architekt font-bold text-2xl text-[#030914]">Zoned Cleanroom Campus</h4>
               <p className="font-telegraf text-slate-600 text-sm leading-relaxed">
                 ~78,000 sq. ft. multi-level pharmaceutical manufacturing facility designed to prevent cross-contamination.
@@ -256,7 +224,6 @@ export default function Home() {
               <div className="w-12 h-12 rounded-2xl bg-[#0052FF]/10 text-[#0052FF] flex items-center justify-center">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <div className="font-architekt text-xs uppercase text-[#0052FF] font-bold tracking-widest">PILLAR 03</div>
               <h4 className="font-architekt font-bold text-2xl text-[#030914]">Advanced Delivery Formats</h4>
               <p className="font-telegraf text-slate-600 text-sm leading-relaxed">
                 Gummies, rotary softgels, effervescents, bilayer tablets, and stabilized classical liquid extracts.
@@ -267,7 +234,6 @@ export default function Home() {
               <div className="w-12 h-12 rounded-2xl bg-[#0052FF]/10 text-[#0052FF] flex items-center justify-center">
                 <Award className="w-6 h-6" />
               </div>
-              <div className="font-architekt text-xs uppercase text-[#0052FF] font-bold tracking-widest">PILLAR 04</div>
               <h4 className="font-architekt font-bold text-2xl text-[#030914]">Global Compliance</h4>
               <p className="font-telegraf text-slate-600 text-sm leading-relaxed">
                 Comprehensive dossier support, Certificate of Analysis (CoA) generation, stability data, and validation.
@@ -281,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 02: DOSAGE PLATFORMS DIRECTORY                                    */}
+      {/* DOSAGE PLATFORMS DIRECTORY                                                */}
       {/* ========================================================================= */}
       <section id="section-platforms" className="relative py-32 md:py-48 px-6 md:px-16 bg-[#030914] text-white">
         
@@ -290,15 +256,10 @@ export default function Home() {
 
         {/* Section Header */}
         <div className="max-w-[1800px] mx-auto mb-24 relative z-10">
-          <div className="flex items-center gap-6 border-b border-white/20 pb-4">
-            <span className="monogram-badge-dark">SECTION 02 • DOSAGE DELIVERY PLATFORMS</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-white/60">MANUFACTURING DIRECTORY</span>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-8">
               <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-white tracking-tight leading-[0.96] uppercase">
-                Manufacturing Index
+                Dosage Delivery Formats
               </h2>
             </div>
             <div className="lg:col-span-4">
@@ -317,7 +278,7 @@ export default function Home() {
               className="group relative rounded-[36px] overflow-hidden glass-dark flex flex-col justify-between hover:border-[#00D2FF] transition-all duration-500 hover:-translate-y-2.5"
             >
               <div>
-                {/* 16:10 4K Image Container */}
+                {/* 16:10 Image Container */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">
                   <img
                     src={p.image}
@@ -326,26 +287,19 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07152B] via-transparent to-transparent pointer-events-none" />
                   
-                  {/* Big Number Badge */}
-                  <div className="absolute top-5 left-5 flex items-center gap-2">
-                    <span className="font-architekt text-base font-bold text-white px-3.5 py-1.5 rounded-xl bg-black/70 backdrop-blur-md border border-white/20 shadow-lg">
+                  {/* Clean Number */}
+                  <div className="absolute top-5 left-5">
+                    <span className="font-architekt text-sm font-bold text-white px-3.5 py-1.5 rounded-xl bg-black/70 backdrop-blur-md border border-white/20 shadow-lg">
                       {p.num}
                     </span>
-                    <span className="font-architekt text-[11px] font-bold text-slate-300 px-2.5 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/10">
-                      {p.code}
-                    </span>
                   </div>
-
-                  <span className="absolute top-5 right-5 font-architekt text-[10px] font-bold text-[#00D2FF] px-3 py-1.5 rounded-full bg-[#0052FF]/40 backdrop-blur-md border border-[#00D2FF]/40 uppercase tracking-widest">
-                    {p.badge}
-                  </span>
                 </div>
 
                 {/* Card Content */}
                 <div className="p-8 space-y-4">
-                  <div className="flex items-center justify-between font-architekt text-xs">
-                    <span className="uppercase tracking-widest text-[#00D2FF] font-bold">{p.category}</span>
-                  </div>
+                  <span className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">
+                    {p.category}
+                  </span>
 
                   <h3 className="font-architekt font-bold text-2xl sm:text-3xl text-white group-hover:text-[#00D2FF] transition-colors leading-tight">
                     {p.title}
@@ -381,7 +335,7 @@ export default function Home() {
             to="/capabilities"
             className="colossal-big-button light"
           >
-            <span>View Full Capabilities Directory</span>
+            <span>View All Capabilities</span>
             <span className="plus-icon">+</span>
           </Link>
         </div>
@@ -389,22 +343,17 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 03: 78,000 SQ. FT. CAMPUS BLUEPRINT                              */}
+      {/* 78,000 SQ. FT. CAMPUS BLUEPRINT                                           */}
       {/* ========================================================================= */}
       <section id="section-facility" className="relative py-32 md:py-48 px-6 md:px-16 bg-[#F8FAFC] border-b border-slate-200">
         
         <div className="max-w-[1800px] mx-auto mb-20">
-          <div className="flex items-center gap-6 border-b border-slate-300 pb-4">
-            <span className="monogram-badge">SECTION 03 • MANUFACTURING CAMPUS</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">FACILITY ENGINEERING</span>
-          </div>
-
-          <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-[#030914] tracking-tight leading-[0.96] uppercase mt-8">
-            ~78,000 Sq. Ft. Campus
+          <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-[#030914] tracking-tight leading-[0.96] uppercase">
+            ~78,000 Sq. Ft. Manufacturing Campus
           </h2>
         </div>
 
-        {/* Panoramic Visual with Blueprint Overlay */}
+        {/* Panoramic Visual with Overlay */}
         <div className="max-w-[1800px] mx-auto rounded-[44px] overflow-hidden shadow-2xl bg-[#030914] text-white border border-slate-800 relative">
           
           <div className="relative aspect-[21/9] min-h-[420px] md:min-h-[540px] overflow-hidden">
@@ -421,12 +370,12 @@ export default function Home() {
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end justify-between">
               <div className="lg:col-span-8 space-y-4">
-                <span className="font-architekt text-xs text-[#00D2FF] uppercase tracking-[0.25em] font-bold">
-                  THREE ZONED PHARMACEUTICAL LEVELS
-                </span>
                 <h3 className="font-architekt font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
                   Zoned for Zero Cross-Contamination & Pharma cGMP
                 </h3>
+                <p className="font-telegraf text-slate-300 text-lg leading-relaxed max-w-3xl">
+                  Engineered with Class 10,000 cleanrooms, independent HVAC air handling units, and strict differential pressure regimes.
+                </p>
               </div>
 
               <div className="lg:col-span-4 flex lg:justify-end">
@@ -434,7 +383,7 @@ export default function Home() {
                   to="/infrastructure"
                   className="colossal-big-button light"
                 >
-                  <span>Interactive Blueprint</span>
+                  <span>Explore Infrastructure</span>
                   <span className="plus-icon">+</span>
                 </Link>
               </div>
@@ -442,23 +391,23 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 border-t border-white/15">
               <div className="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-3">
-                <div className="font-architekt text-2xl font-bold text-[#00D2FF]">LEVEL 01</div>
+                <div className="font-architekt text-xl font-bold text-[#00D2FF]">Ground Floor</div>
                 <h4 className="font-architekt font-bold text-xl text-white">Extraction & Raw Materials</h4>
                 <p className="font-telegraf text-sm text-slate-300 leading-relaxed">
-                  Heavy botanical pulverizing, solvent extraction vessels, primary decanting & temperature-controlled warehouses.
+                  Botanical pulverizing, solvent extraction vessels, primary decanting & temperature-controlled warehouses.
                 </p>
               </div>
 
               <div className="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-3">
-                <div className="font-architekt text-2xl font-bold text-[#00D2FF]">LEVEL 02</div>
-                <h4 className="font-architekt font-bold text-xl text-white">Class 10,000 Cleanroom Suites</h4>
+                <div className="font-architekt text-xl font-bold text-[#00D2FF]">First Floor</div>
+                <h4 className="font-architekt font-bold text-xl text-white">Class 10,000 Cleanrooms</h4>
                 <p className="font-telegraf text-sm text-slate-300 leading-relaxed">
-                  Softgel rotary die lines, low-humidity effervescent suites, starchless gummy depositors & high-speed tablet compression.
+                  Softgel rotary die lines, low-humidity effervescent suites, starchless gummy depositors & tablet compression.
                 </p>
               </div>
 
               <div className="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-3">
-                <div className="font-architekt text-2xl font-bold text-[#00D2FF]">LEVEL 03</div>
+                <div className="font-architekt text-xl font-bold text-[#00D2FF]">Second Floor</div>
                 <h4 className="font-architekt font-bold text-xl text-white">Packaging & Analytical Labs</h4>
                 <p className="font-telegraf text-sm text-slate-300 leading-relaxed">
                   Alu-Alu blistering, automated bottling, HPLC/HPTLC testing, microbiology suites & corporate offices.
@@ -472,18 +421,13 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 04: CDMO PROCESS PIPELINE                                        */}
+      {/* CDMO METHODOLOGY PIPELINE                                                 */}
       {/* ========================================================================= */}
       <section id="section-pipeline" className="relative py-32 md:py-48 px-6 md:px-16 bg-[#F8FAFC] border-b border-slate-200">
         
         <div className="max-w-[1800px] mx-auto mb-20">
-          <div className="flex items-center gap-6 border-b border-slate-300 pb-4">
-            <span className="monogram-badge">SECTION 04 • MANUFACTURING PIPELINE</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">10-STEP CDMO ROADMAP</span>
-          </div>
-
-          <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-[#030914] tracking-tight leading-[0.96] uppercase mt-8">
-            Idea to Commercial Scale
+          <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-[#030914] tracking-tight leading-[0.96] uppercase">
+            Turnkey CDMO Workflow
           </h2>
         </div>
 
@@ -528,7 +472,7 @@ export default function Home() {
             to="/contract-manufacturing"
             className="colossal-big-button"
           >
-            <span>Explore 10-Step CDMO Pipeline</span>
+            <span>Explore 10-Step Process</span>
             <span className="plus-icon">+</span>
           </Link>
         </div>
@@ -536,18 +480,13 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 05: 9-STAGE QUALITY FRAMEWORK                                     */}
+      {/* QUALITY & QC SYSTEMS                                                      */}
       {/* ========================================================================= */}
       <section id="section-quality" className="relative py-32 md:py-48 px-6 md:px-16 bg-[#030914] text-white">
         
         <div className="max-w-[1800px] mx-auto mb-20">
-          <div className="flex items-center gap-6 border-b border-white/20 pb-4">
-            <span className="monogram-badge-dark">SECTION 05 • QUALITY SYSTEMS</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-white/60">ANALYTICAL SCIENCE & QC</span>
-          </div>
-
-          <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-white tracking-tight leading-[0.96] uppercase mt-8">
-            9-Stage Quality Framework
+          <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[88px] text-white tracking-tight leading-[0.96] uppercase">
+            Quality Assurance & Testing
           </h2>
         </div>
 
@@ -562,9 +501,6 @@ export default function Home() {
           </div>
           
           <div className="lg:col-span-6 space-y-6">
-            <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">
-              CHROMATOGRAPHIC & MICROBIAL TESTING SUITES
-            </div>
             <h3 className="font-architekt font-bold text-3xl sm:text-4xl text-white">
               Every Batch Backed by Instrumental Proof
             </h3>
@@ -573,7 +509,7 @@ export default function Home() {
             </p>
             <div className="pt-2">
               <Link to="/quality" className="colossal-big-button light">
-                <span>View All 9 QC Stages</span>
+                <span>View Quality Systems</span>
                 <span className="plus-icon">+</span>
               </Link>
             </div>
@@ -582,24 +518,24 @@ export default function Home() {
 
         <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-10 rounded-3xl bg-white/5 border border-white/10 space-y-4">
-            <div className="font-architekt text-2xl font-bold text-[#00D2FF]">STAGES 01 - 03</div>
-            <h4 className="font-architekt font-bold text-2xl text-white">Raw Material & Microbial</h4>
+            <div className="font-architekt text-xl font-bold text-[#00D2FF]">01. Raw Materials</div>
+            <h4 className="font-architekt font-bold text-2xl text-white">Identity & Purity</h4>
             <p className="font-telegraf text-sm text-slate-300 leading-relaxed">
               Botanical identity voucher verification, heavy metal spectrometry (Pb, Cd, Hg, As), and pathogen screening.
             </p>
           </div>
 
           <div className="p-10 rounded-3xl bg-white/5 border border-white/10 space-y-4">
-            <div className="font-architekt text-2xl font-bold text-[#00D2FF]">STAGES 04 - 06</div>
-            <h4 className="font-architekt font-bold text-2xl text-white">In-Process & HPLC Assays</h4>
+            <div className="font-architekt text-xl font-bold text-[#00D2FF]">02. In-Process</div>
+            <h4 className="font-architekt font-bold text-2xl text-white">Assays & Controls</h4>
             <p className="font-telegraf text-sm text-slate-300 leading-relaxed">
               Continuous weight/hardness IPQC, chromatographic active marker quantification, and blister vacuum leak tests.
             </p>
           </div>
 
           <div className="p-10 rounded-3xl bg-white/5 border border-white/10 space-y-4">
-            <div className="font-architekt text-2xl font-bold text-[#00D2FF]">STAGES 07 - 09</div>
-            <h4 className="font-architekt font-bold text-2xl text-white">Finished Release & BMR Sign-off</h4>
+            <div className="font-architekt text-xl font-bold text-[#00D2FF]">03. Final Release</div>
+            <h4 className="font-architekt font-bold text-2xl text-white">Stability & Batch CoA</h4>
             <p className="font-telegraf text-sm text-slate-300 leading-relaxed">
               ICH Q1A stability chamber monitoring, complete Batch Manufacturing Record audit, and formal QP release.
             </p>
@@ -609,15 +545,14 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 06: FREQUENTLY ASKED QUESTIONS (SEO KNOWLEDGE BASE)               */}
+      {/* FREQUENTLY ASKED QUESTIONS                                                */}
       {/* ========================================================================= */}
       <section className="py-28 px-6 md:px-16 bg-[#030914] text-white">
         <div className="max-w-[1400px] mx-auto space-y-16">
           
-          <div className="flex items-center gap-6 border-b border-white/20 pb-4">
-            <span className="monogram-badge-dark">FREQUENTLY ASKED QUESTIONS</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-white/60">CDMO KNOWLEDGE BASE</span>
-          </div>
+          <h2 className="font-architekt text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
+            Frequently Asked Questions
+          </h2>
 
           <div className="space-y-6">
             {[
@@ -663,15 +598,11 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 07: B2B PARTNERSHIP INTAKE CALLOUT                                */}
+      {/* PROJECT INTAKE CALLOUT                                                    */}
       {/* ========================================================================= */}
       <section className="relative py-32 md:py-44 px-6 md:px-16 text-center bg-[#F8FAFC]">
         <div className="max-w-5xl mx-auto space-y-10">
           
-          <span className="monogram-badge">
-            PROJECT INTAKE & PARTNERSHIP
-          </span>
-
           <h2 className="font-architekt text-5xl sm:text-6xl md:text-7xl lg:text-[84px] text-[#030914] tracking-tight leading-[0.96] uppercase">
             Have a Formulation Concept?<br />
             <span className="text-[#0052FF]">Let's Build It Together.</span>

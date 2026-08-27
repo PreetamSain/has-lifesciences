@@ -4,57 +4,55 @@ import GinkgoHeroCard from '../components/GinkgoHeroCard';
 import SEO from '../components/SEO';
 
 export default function Infrastructure() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [selectedLevel, setSelectedLevel] = useState(1);
 
   const levels = [
     {
       level: 1,
-      code: 'LEVEL 01',
-      title: 'Level 01: Botanical Extraction & Wet Processing',
-      badge: 'GROUND FLOOR • EXTRACTION & LIQUIDS',
-      desc: 'Dedicated heavy processing floor equipped with falling-film vacuum evaporators, hydro-alcoholic percolation loops, rotary die softgel encapsulation suites, continuous gummy setting tunnels, and fresh herbal swaras juice extraction.',
+      title: 'Ground Floor: Extraction & Bulk Materials',
+      desc: 'Heavy botanical pulverization, SS316 solvent extraction batteries, falling-film vacuum evaporation, raw botanical quarantine storage, and cold-chain storage suites.',
       rooms: [
-        'Botanical Percolation & Solvent Extraction Loop Suites',
-        'Vacuum Falling-Film Solvent Recovery Hall',
-        '8-Inch Rotary Die Softgel Encapsulation Suite',
-        'Continuous Pectin Gummy Cooking & Setting Tunnels',
-        'Steam-Jacketed Pravahi Kwath Decoction Vessels',
-        'Aseptic Liquid Bottling & Capping Cleanroom'
+        'Botanical Raw Herb Cleaning & Milling Suite',
+        'Falling-Film Vacuum Evaporator Hall',
+        'Closed-Loop Ethanol & Aqueous Extraction Battery',
+        'Steam-Jacketed Classical Decoction Units',
+        'Raw Material Quarantine & Controlled Cold Storage',
+        'Hazardous Solvent Recovery & Waste Treatment Facility'
       ]
     },
     {
       level: 2,
-      code: 'LEVEL 02',
-      title: 'Level 02: Solid Oral Dosage & <20% RH Suite',
-      badge: 'FIRST FLOOR • COMPRESSION & DRYING',
-      desc: 'Engineered for high-volume powder handling and tableting. Includes rapid high-shear granulators, fluid bed dryers (FBD), multi-station rotary tablet presses, automated coating pans, and an isolated <20% RH low-humidity room for effervescents.',
+      title: 'First Floor: Cleanroom Suites & Formulations',
+      desc: 'Class 10,000 / ISO 7 cleanroom suites housing rotary die softgel encapsulation, low-humidity effervescent tableting, functional gummy mogul depositors, and tablet compression.',
       rooms: [
-        'High-Shear Wet Granulation & Fluid Bed Drying (FBD)',
-        'Multi-Station High-Speed Rotary Tablet Presses',
-        'Automated Perforated Pan Aqueous Film Coating',
-        'Automatic Vegetarian (HPMC) Capsule Filling Hall',
-        'Dedicated <20% RH Climate-Controlled Effervescent Suite',
-        'In-Process Quality Control (IPQC) Core Laboratory'
+        'Rotary Die Softgel Encapsulation Cleanrooms',
+        'Softgel Tumble Drying & Inspection Tunnels',
+        '<20% RH Desiccant Effervescent Tableting Suite',
+        'Continuous Starchless Gummy Depositing Line',
+        'High-Speed Bilayer Tablet Rotary Compression',
+        'Aqueous & Enteric Tablet Film Coating Suite'
       ]
     },
     {
       level: 3,
-      code: 'LEVEL 03',
-      title: 'Level 03: High-Speed Packaging & QC Testing Labs',
-      badge: 'SECOND FLOOR • PACKAGING & ANALYTICAL',
-      desc: 'Houses automated packaging lines (Alu-Alu blister packaging, bottle induction sealing, sachet filling) alongside our analytical testing laboratory, microbiology isolation suites, stability chambers, and corporate offices.',
+      title: 'Second Floor: Packaging & Analytical Testing Labs',
+      desc: 'Automated barrier packaging lines (Alu-Alu blister, HDPE bottling, stick-packs) integrated alongside Agilent HPLC analytical laboratories, Class 10k microbiology, and corporate offices.',
       rooms: [
-        'High-Speed Thermoforming & Alu-Alu Blister Packing',
-        'Automated Bottle Desiccant, Count & Induction Sealing',
-        'Stick Pack & Sachet Vertical Form Fill Seal (VFFS)',
-        'HPLC, HPTLC & FTIR Instrumental Testing Laboratories',
-        'Class 10,000 Microbiology Inoculation & Bioburden Testing',
-        'ICH Q1A Stability Chambers & Corporate Directorate'
+        'High-Speed Rotary Alu-Alu Blister Packaging',
+        'Automated HDPE & Amber Glass Bottling Line',
+        'Multi-Lane Effervescent Desiccant Tube Filling',
+        'Analytical Phyto-Chemistry Lab (Agilent HPLC & HPTLC)',
+        'Class 10,000 Sterility & Microbiology Suite',
+        'ICH Q1A Stability Chambers (Real-time & Accelerated)'
       ]
     }
   ];
 
-  const currentData = levels.find((l) => l.level === selectedLevel);
+  const currentData = levels.find((l) => l.level === selectedLevel) || levels[0];
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
@@ -67,9 +65,7 @@ export default function Infrastructure() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 03 • INFRASTRUCTURE"
-          badge="CAMPUS MASTERPLAN"
-          headlineMain="~78,000 Sq. Ft. Integrated Campus."
+          headlineMain="~78,000 Sq. Ft. Manufacturing Campus."
           description="A multi-tier pharmaceutical and botanical manufacturing campus engineered from the ground up for strict zoning, zero cross-contamination, and high-throughput commercial scale."
           primaryBtnText="Explore Blueprint"
           primaryBtnLink="#blueprint"
@@ -81,9 +77,10 @@ export default function Infrastructure() {
 
       {/* 2. INTERACTIVE 3-LEVEL BLUEPRINT EXPLORER */}
       <section id="blueprint" className="max-w-[1800px] mx-auto px-6 md:px-16 scroll-mt-32">
-        <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">FACILITY BLUEPRINT</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">THREE ZONED LEVELS</span>
+        <div className="mb-12">
+          <h2 className="font-architekt text-4xl sm:text-5xl md:text-6xl text-[#030914] uppercase tracking-tight">
+            Zoned Facility Architecture
+          </h2>
         </div>
 
         {/* Level Switcher Buttons */}
@@ -98,8 +95,8 @@ export default function Infrastructure() {
                   : 'glass-light text-[#030914] border-slate-300 hover:border-[#0052FF]'
               }`}
             >
-              <div className="font-architekt text-xs uppercase tracking-widest font-bold mb-2 opacity-80 flex items-center justify-between">
-                <span>LEVEL 0{lvl.level}</span>
+              <div className="font-architekt text-xs uppercase tracking-widest font-bold mb-2 opacity-80">
+                Floor 0{lvl.level}
               </div>
               <div className="font-architekt font-bold text-2xl">
                 {lvl.level === 1 ? 'Extraction & Liquids' : lvl.level === 2 ? 'Solids & Effervescents' : 'Packaging & Labs'}
@@ -115,12 +112,9 @@ export default function Infrastructure() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start justify-between border-b border-white/15 pb-12 relative z-10">
             <div className="lg:col-span-8 space-y-4">
-              <span className="monogram-badge-dark">
-                {currentData.badge}
-              </span>
-              <h2 className="font-architekt font-bold text-3xl sm:text-4xl lg:text-5xl text-white uppercase">
+              <h3 className="font-architekt font-bold text-3xl sm:text-4xl lg:text-5xl text-white uppercase">
                 {currentData.title}
-              </h2>
+              </h3>
               <p className="font-telegraf text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl">
                 {currentData.desc}
               </p>
@@ -136,7 +130,7 @@ export default function Infrastructure() {
           {/* Rooms Grid */}
           <div className="space-y-6 relative z-10">
             <div className="font-architekt text-xs uppercase text-white/50 tracking-widest">
-              ZONED CLEANROOM SUITES & OPERATIONAL SECTORS
+              ZONED SUITES & OPERATIONAL SECTORS
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentData.rooms.map((room, rIdx) => (
@@ -156,14 +150,15 @@ export default function Infrastructure() {
 
       {/* 3. HVAC & UTILITIES TECHNICAL SPECIFICATIONS */}
       <section className="max-w-[1800px] mx-auto px-6 md:px-16">
-        <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">UTILITY ENGINEERING</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">ENVIRONMENTAL CONTROL & PURITY</span>
+        <div className="mb-12">
+          <h2 className="font-architekt text-4xl sm:text-5xl md:text-6xl text-[#030914] uppercase tracking-tight">
+            Environmental Control & Purity
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="glass-light glass-card-hover p-10 rounded-[36px] space-y-4">
-            <div className="font-architekt text-3xl font-bold text-[#0052FF]">01 • HVAC</div>
+            <div className="font-architekt text-3xl font-bold text-[#0052FF]">01</div>
             <h3 className="font-architekt font-bold text-2xl text-[#030914]">HEPA Cleanroom Air</h3>
             <p className="font-telegraf text-slate-600 text-sm md:text-base leading-relaxed">
               AHU systems equipped with 0.3-micron terminal HEPA filtration ensuring positive air pressure and 20+ air changes per hour to prevent airborne particulate ingress.
@@ -171,7 +166,7 @@ export default function Infrastructure() {
           </div>
 
           <div className="glass-light glass-card-hover p-10 rounded-[36px] space-y-4">
-            <div className="font-architekt text-3xl font-bold text-[#0052FF]">02 • WATER</div>
+            <div className="font-architekt text-3xl font-bold text-[#0052FF]">02</div>
             <h3 className="font-architekt font-bold text-2xl text-[#030914]">USP Purified Water Loop</h3>
             <p className="font-telegraf text-slate-600 text-sm md:text-base leading-relaxed">
               Continuous circulation pharmaceutical water system utilizing double-pass reverse osmosis (RO) and EDI with sanitizing UV lamp arrays.
@@ -179,7 +174,7 @@ export default function Infrastructure() {
           </div>
 
           <div className="glass-light glass-card-hover p-10 rounded-[36px] space-y-4">
-            <div className="font-architekt text-3xl font-bold text-[#0052FF]">03 • CLIMATE</div>
+            <div className="font-architekt text-3xl font-bold text-[#0052FF]">03</div>
             <h3 className="font-architekt font-bold text-2xl text-[#030914]">&lt;20% RH Dehumidification</h3>
             <p className="font-telegraf text-slate-600 text-sm md:text-base leading-relaxed">
               Desiccant rotor dehumidification for our effervescent and moisture-reactive encapsulation suites, guaranteeing product chemical stability.

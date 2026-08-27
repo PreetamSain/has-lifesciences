@@ -11,10 +11,9 @@ export default function ResearchDevelopment() {
   const pillars = [
     {
       num: '01',
-      code: 'PILLAR 01',
       title: 'Botanical Chemistry & Active Isolation',
       desc: 'Screening raw botanical materials for marker compounds, active principles, pesticide residue profiles, and heavy metal limits using high-performance chromatography.',
-      tag: 'PHYTOCHEMISTRY LAB',
+      tag: 'Phytochemistry Lab',
       points: [
         'Chromatographic profiling (HPLC & HPTLC)',
         'Standardization of active bio-markers (Withanolides, Curcuminoids)',
@@ -24,10 +23,9 @@ export default function ResearchDevelopment() {
     },
     {
       num: '02',
-      code: 'PILLAR 02',
       title: 'Formulation Design & Dosage Technology',
       desc: 'Overcoming delivery hurdles: lipid self-emulsification, low-humidity effervescent kinetics, taste-masking of bitter extracts, and dissolution optimization.',
-      tag: 'DOSAGE ENGINEERING',
+      tag: 'Dosage Engineering',
       points: [
         'Lipid & oil delivery formulation for softgel encapsulation',
         'Hydrocolloid structuring & gel strength optimization for pectin gummies',
@@ -37,10 +35,9 @@ export default function ResearchDevelopment() {
     },
     {
       num: '03',
-      code: 'PILLAR 03',
       title: 'Sensory Science & Taste Masking',
       desc: 'Transforming potent, bitter, astringent herbal extracts into consumer-preferred chewable gummies, effervescent drinks, syrups, and flavoured nutritional powders.',
-      tag: 'ORGANOLEPTIC SCIENCE',
+      tag: 'Organoleptic Science',
       points: [
         'Specialized botanical bitterness suppression technologies',
         'Natural flavor modulation, masking systems, and mouthfeel enhancement',
@@ -50,10 +47,9 @@ export default function ResearchDevelopment() {
     },
     {
       num: '04',
-      code: 'PILLAR 04',
       title: 'Analytical Method Development & Stability',
       desc: 'Developing in-house validated analytical methods for novel multi-herb mixtures, proprietary blends, and functional finished dosage matrixes.',
-      tag: 'METHOD VALIDATION',
+      tag: 'Method Validation',
       points: [
         'Assay method development for single and multi-ingredient blends',
         'Dissolution and disintegration testing across simulated digestive media',
@@ -74,8 +70,6 @@ export default function ResearchDevelopment() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 07 • LABS & SCIENCE"
-          badge="R&D PHYTOTHERAPY"
           headlineMain="Science-Driven Formulation."
           description="At HAS Lifesciences, research and development is focused on solving real formulation, delivery, bioavailability, stability, and sensory challenges in botanical and nutraceutical products."
           primaryBtnText="Initiate R&D Brief"
@@ -88,9 +82,10 @@ export default function ResearchDevelopment() {
 
       {/* 2. FOUR CORE R&D PILLARS */}
       <section className="max-w-[1800px] mx-auto px-6 md:px-16">
-        <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">R&D SCOPE</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">4 STRATEGIC PILLARS</span>
+        <div className="mb-12">
+          <h2 className="font-architekt text-4xl sm:text-5xl md:text-6xl text-[#030914] uppercase tracking-tight">
+            R&D Formulation & Science
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -100,12 +95,9 @@ export default function ResearchDevelopment() {
               className="glass-light glass-card-hover p-10 rounded-[36px] space-y-6 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-4">
+                <div className="border-b border-slate-200 pb-4 mb-4">
                   <span className="font-architekt text-3xl font-bold text-[#0052FF]">
                     {item.num}
-                  </span>
-                  <span className="font-architekt text-xs text-slate-400 font-bold">
-                    {item.code}
                   </span>
                 </div>
 
@@ -123,7 +115,7 @@ export default function ResearchDevelopment() {
 
                 <div className="pt-4 border-t border-slate-200 space-y-3">
                   <div className="font-architekt text-[11px] uppercase text-slate-400 font-bold tracking-widest">
-                    LAB WORKFLOW
+                    LAB CAPABILITIES
                   </div>
                   {item.points.map((pt, idx) => (
                     <div key={idx} className="flex items-start gap-2.5 text-xs font-architekt text-slate-700">
@@ -139,7 +131,7 @@ export default function ResearchDevelopment() {
                   to="/partner"
                   className="text-xs font-architekt uppercase tracking-wider text-[#030914] hover:text-[#0052FF] flex items-center justify-between transition-colors font-bold"
                 >
-                  <span>Submit Lab Formulation Brief</span>
+                  <span>Submit Formulation Brief</span>
                   <span>→</span>
                 </Link>
               </div>

@@ -10,23 +10,20 @@ export default function About() {
 
   const leadership = [
     {
-      code: 'DIRECTORATE',
       name: 'Executive Directorate',
-      role: 'CORPORATE STRATEGY & GOVERNANCE',
+      role: 'Corporate Strategy & Governance',
       desc: 'Steering the transition from HAS Herbal into HAS Lifesciences Private Limited, anchoring ~78,000 sq. ft. campus capital deployment and global B2B partnerships.',
       image: '/assets/generated/has_leadership_team_1787820287755.jpg'
     },
     {
-      code: 'R&D DESK',
       name: 'R&D Phytochemistry Team',
-      role: 'ACTIVE MARKER STANDARDIZATION',
+      role: 'Active Marker Standardization',
       desc: 'Specializing in HPLC-quantified botanical extraction protocols, falling-film vacuum evaporation, and stability validation of thermolabile bioactives.',
       image: '/assets/generated/has_analytical_hplc_lab_1787820264292.jpg'
     },
     {
-      code: 'OPERATIONS',
       name: 'Plant Operations & cGMP',
-      role: 'CLEANROOM & ENGINEERING',
+      role: 'Cleanroom & Engineering',
       desc: 'Overseeing HVAC cleanroom qualification, rotary die softgel encapsulation, continuous gummy setting tunnels, and <20% RH low-humidity suites.',
       image: '/assets/generated/has_cleanroom_hero_1787739262235.jpg'
     }
@@ -43,8 +40,6 @@ export default function About() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 06 • COMPANY"
-          badge="STRATEGIC EVOLUTION"
           headlineMain="From Classical Roots to Next-Gen Science."
           description="The strategic transformation of HAS Herbal into HAS Lifesciences Private Limited — uniting time-tested Ayurvedic wisdom with high-throughput pharmaceutical manufacturing standards."
           primaryBtnText="Explore Capabilities"
@@ -57,11 +52,6 @@ export default function About() {
 
       {/* 2. THE REBRANDING NARRATIVE */}
       <section className="max-w-[1800px] mx-auto px-6 md:px-16">
-        <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">FOUNDING VISION</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">AYURVEDA & ANALYTICAL PROOF</span>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           <div className="lg:col-span-6 space-y-8">
             <div className="colossal-disc border-[#0052FF]">
@@ -75,11 +65,8 @@ export default function About() {
           </div>
 
           <div className="lg:col-span-6 space-y-8 text-lg sm:text-xl text-slate-700 leading-relaxed font-telegraf">
-            <p className="font-bold text-[#030914] uppercase font-architekt text-sm tracking-wider">
-              CHALLENGE: BATCH VARIABILITY → SOLUTION: STANDARDIZED CHROMATOGRAPHY
-            </p>
             <p>
-              HAS Lifesciences Private Limited was founded to bridge this gap. By building a master ~78,000 sq. ft. manufacturing campus with dedicated cleanrooms, falling-film vacuum extraction loops, and HPLC/HPTLC testing laboratories, we empower health and wellness brands worldwide to formulate with absolute clinical confidence.
+              HAS Lifesciences Private Limited was founded to bridge the gap between traditional herbal formulation and modern pharmaceutical precision. By building a master ~78,000 sq. ft. manufacturing campus with dedicated cleanrooms, falling-film vacuum extraction loops, and HPLC/HPTLC testing laboratories, we empower health and wellness brands worldwide to formulate with absolute clinical confidence.
             </p>
 
             <div className="pt-4">
@@ -96,9 +83,10 @@ export default function About() {
       <section className="py-28 px-6 md:px-16 bg-[#030914] text-white">
         <div className="max-w-[1800px] mx-auto space-y-20">
           
-          <div className="flex items-center gap-6 border-b border-white/20 pb-4">
-            <span className="monogram-badge-dark">THE HAS PHILOSOPHY</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-white/60">THREE CORE PILLARS</span>
+          <div>
+            <h2 className="font-architekt text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
+              Core Principles
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -132,9 +120,10 @@ export default function About() {
 
       {/* 4. LEADERSHIP & SCIENTIFIC TEAMS */}
       <section className="max-w-[1800px] mx-auto px-6 md:px-16">
-        <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">ORGANIZATION</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">SCIENTIFIC DIRECTORATE</span>
+        <div className="mb-12">
+          <h2 className="font-architekt text-4xl sm:text-5xl md:text-6xl text-[#030914] uppercase tracking-tight">
+            Scientific & Operational Leadership
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -152,18 +141,13 @@ export default function About() {
               </div>
 
               <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">
-                    {member.role}
-                  </span>
-                  <span className="font-architekt text-[10px] text-slate-400 font-bold">
-                    {member.code}
-                  </span>
+                <div className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">
+                  {member.role}
                 </div>
                 <h3 className="font-architekt font-bold text-2xl text-[#030914]">
                   {member.name}
                 </h3>
-                <p className="font-telegraf text-sm text-slate-600 leading-relaxed">
+                <p className="font-telegraf text-slate-600 text-sm leading-relaxed">
                   {member.desc}
                 </p>
               </div>
