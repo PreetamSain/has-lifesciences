@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, ShieldCheck, CheckCircle2, Award, Zap, 
   FlaskConical, Sparkles, Building2, Microchip, Layers, 
-  Activity, RefreshCw, BarChart3, Database, Globe, ChevronRight, Dna, Factory
+  Activity, RefreshCw, BarChart3, Database, Globe, ChevronRight, Dna, Factory,
+  ChevronDown, HelpCircle
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Home() {
   useEffect(() => {
@@ -82,6 +84,11 @@ export default function Home() {
 
   return (
     <div className="w-full min-h-screen bg-[#030914] text-white">
+      <SEO
+        title="HAS Lifesciences | Next-Gen Botanical & Nutraceutical CDMO India"
+        description="HAS Lifesciences Private Limited is India’s premier integrated CDMO for standardized botanical extraction, softgels, pectin gummies, effervescent tablets, and ~78,000 sq. ft. cGMP manufacturing facility in Jaipur, Rajasthan."
+        keywords="HAS Lifesciences, HAS Herbal, Botanical CDMO, Nutraceutical Manufacturer India, Softgel CDMO India, Pectin Gummies Manufacturer India, Effervescent Tablets CDMO, Ayurvedic Contract Manufacturing, HPLC Standardized Extracts, cGMP Pharma Facility Jaipur, HAS Lifesciences Private Limited"
+      />
       
       {/* ========================================================================= */}
       {/* SECTION 00: CINEMATIC FULL-SCREEN HERO (SINGLE 4K IMAGE)                  */}
@@ -602,7 +609,61 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 06: B2B PARTNERSHIP INTAKE CALLOUT                                */}
+      {/* SECTION 06: FREQUENTLY ASKED QUESTIONS (SEO KNOWLEDGE BASE)               */}
+      {/* ========================================================================= */}
+      <section className="py-28 px-6 md:px-16 bg-[#030914] text-white">
+        <div className="max-w-[1400px] mx-auto space-y-16">
+          
+          <div className="flex items-center gap-6 border-b border-white/20 pb-4">
+            <span className="monogram-badge-dark">FREQUENTLY ASKED QUESTIONS</span>
+            <span className="font-architekt text-xs uppercase tracking-widest text-white/60">CDMO KNOWLEDGE BASE</span>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: 'What contract manufacturing services does HAS Lifesciences provide?',
+                a: 'HAS Lifesciences Private Limited provides comprehensive end-to-end CDMO (Contract Development and Manufacturing) solutions covering standardized botanical extraction, rotary softgel encapsulation, pectin nutraceutical gummies, effervescent tablets, bilayer oral solid tablets, and classical Ayurvedic liquid decoctions (Kwath/Swaras).'
+              },
+              {
+                q: 'Where is the HAS Lifesciences manufacturing campus located?',
+                a: 'Our ~78,000 sq. ft. multi-level pharmaceutical and botanical manufacturing campus is located in Jaipur, Rajasthan, India, engineered in accordance with WHO-GMP and international export standards.'
+              },
+              {
+                q: 'What quality testing and chromatographic validations do you perform?',
+                a: 'Every production batch undergoes a 9-stage quality protocol including HPLC, HPTLC, and LC-MS active phytomarker assay quantification, heavy metal spectrometry (Pb, Cd, Hg, As), microbial bio-burden screening, and ICH Q1A real-time and accelerated stability testing.'
+              },
+              {
+                q: 'Does HAS Lifesciences support custom formulation, taste masking, and pilot scaling?',
+                a: 'Yes, our R&D Phytochemistry and Organoleptic labs specialize in custom recipe engineering, botanical bitterness masking for consumer gummies and drinks, laboratory pilot batches (1-5 kg), and seamless industrial scale-up.'
+              },
+              {
+                q: 'What compliance and export regulatory dossiers do you support?',
+                a: 'We provide full technical documentation including Batch Manufacturing Records (BMR), Certificates of Analysis (CoA), stability data, and regulatory dossiers compliant with FSSAI, AYUSH, US-FDA cGMP benchmarks, and global health authorities.'
+              }
+            ].map((faq, fIdx) => (
+              <details
+                key={fIdx}
+                className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-[#00D2FF] transition-all cursor-pointer open:bg-white/10"
+              >
+                <summary className="font-architekt font-bold text-xl sm:text-2xl text-white flex items-center justify-between list-none">
+                  <span>{faq.q}</span>
+                  <span className="text-[#00D2FF] text-2xl font-light group-open:rotate-45 transition-transform duration-300">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 font-telegraf text-slate-300 text-base sm:text-lg leading-relaxed pt-4 border-t border-white/10">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SECTION 07: B2B PARTNERSHIP INTAKE CALLOUT                                */}
       {/* ========================================================================= */}
       <section className="relative py-32 md:py-44 px-6 md:px-16 text-center bg-[#F8FAFC]">
         <div className="max-w-5xl mx-auto space-y-10">

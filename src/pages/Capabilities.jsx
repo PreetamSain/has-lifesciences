@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function Capabilities() {
   useEffect(() => {
@@ -102,6 +103,11 @@ export default function Capabilities() {
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="Dosage Delivery Capabilities | Softgels, Gummies & Effervescents | HAS Lifesciences"
+        description="Explore HAS Lifesciences manufacturing capabilities: Standardized botanical extraction, rotary softgel encapsulation, pectin nutraceutical gummies, effervescent dissolution, bilayer tablets, and Ayurvedic liquids."
+        keywords="Nutraceutical Gummies Manufacturer India, Softgel CDMO India, Effervescent Tablets Manufacturer, Botanical Extraction Facility, Bilayer Tablets Pharma India, Ayurvedic Kwath Bottling"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">

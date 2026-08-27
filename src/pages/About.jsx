@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function About() {
   useEffect(() => {
@@ -33,6 +34,11 @@ export default function About() {
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="About Us | Heritage to Next-Gen Science | HAS Lifesciences"
+        description="Learn about HAS Lifesciences Private Limited: our transition from HAS Herbal into India’s premier ~78,000 sq. ft. botanical and nutraceutical CDMO campus."
+        keywords="About HAS Lifesciences, HAS Herbal History, Botanical CDMO Leadership, Pharma Manufacturing Team Jaipur, HAS Lifesciences Corporate Story"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">

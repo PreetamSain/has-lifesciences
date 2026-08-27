@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function ResearchDevelopment() {
   useEffect(() => {
@@ -64,6 +65,11 @@ export default function ResearchDevelopment() {
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="R&D Phytotherapy & Formulation Science | HAS Lifesciences"
+        description="Explore research and development at HAS Lifesciences: botanical active isolation, dosage engineering, organoleptic taste masking, and validated analytical stability methods."
+        keywords="Phytotherapy R&D India, Botanical Taste Masking Technology, Herbal Formulation Development, Bioavailability Enhancer CDMO, Analytical Method Validation"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">

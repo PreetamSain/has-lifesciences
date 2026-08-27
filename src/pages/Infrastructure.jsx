@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function Infrastructure() {
   const [selectedLevel, setSelectedLevel] = useState(1);
@@ -57,6 +58,11 @@ export default function Infrastructure() {
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="78,000 Sq. Ft. Manufacturing Campus | Jaipur | HAS Lifesciences"
+        description="Explore the HAS Lifesciences ~78,000 sq. ft. 3-level pharmaceutical and botanical manufacturing campus in Jaipur, Rajasthan. Class 10,000 cleanrooms, HPLC testing labs, and <20% RH effervescent suites."
+        keywords="Pharma Manufacturing Plant Jaipur, cGMP Facility Rajasthan, Cleanroom Manufacturing Campus, 78000 sq ft CDMO Plant, Ayush GMP Factory Jaipur, HAS Lifesciences Campus"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function ContractManufacturing() {
   useEffect(() => {
@@ -22,6 +23,11 @@ export default function ContractManufacturing() {
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="10-Step CDMO Methodology | Turnkey Contract Manufacturing | HAS Lifesciences"
+        description="Discover HAS Lifesciences 10-step CDMO methodology: from product brief, taste masking, and pilot batches (1-5 kg) to commercial cleanroom execution, stability, and release."
+        keywords="Pharma CDMO Workflow, Turnkey Contract Manufacturing India, Loan License Tolling Pharma, Botanical Formulation Roadmap, FSSAI AYUSH Dossier"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">

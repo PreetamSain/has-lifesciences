@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function Quality() {
   useEffect(() => {
@@ -21,6 +22,11 @@ export default function Quality() {
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="Quality Control & Analytical Testing Labs | HPLC Assays | HAS Lifesciences"
+        description="Learn about HAS Lifesciences 9-stage quality assurance protocol: Agilent HPLC chromatography, ICP-MS heavy metal limits, Class 10k microbiology, and ICH Q1A stability testing."
+        keywords="Pharma Quality Testing Jaipur, HPLC Assay Lab India, Heavy Metals ICP-MS Testing Botanicals, ICH Q1A Stability Chambers, CoA Verification Pharma"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">

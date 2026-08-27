@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function Packaging() {
   useEffect(() => {
@@ -60,6 +61,11 @@ export default function Packaging() {
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="Automated Pharmaceutical & Nutraceutical Packaging | HAS Lifesciences"
+        description="High-barrier Alu-Alu blister packaging, automated HDPE/Amber glass bottling, desiccant effervescent tubes, and stick-pack powder sachets at HAS Lifesciences."
+        keywords="Pharma Packaging India, Alu-Alu Blister Packaging CDMO, Effervescent Tube Filling, HDPE Bottling Facility Jaipur, Stick Pack Sachet Contract Packaging"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">

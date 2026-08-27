@@ -1,0 +1,17 @@
+{
+  "name": "HAS Lifesciences Private Limited",
+  "short_name": "HAS Lifesciences",
+  "description": "Next-Generation Botanical & Nutraceutical Contract Development and Manufacturing Organization (CDMO) in India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030914",
+  "theme_color": "#0052FF",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

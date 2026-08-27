@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle2, ArrowRight, Upload } from 'lucide-react';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function Partner() {
   useEffect(() => {
@@ -38,6 +39,11 @@ export default function Partner() {
 
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="Project Brief Intake | CDMO Partnership | HAS Lifesciences"
+        description="Initiate a technical formulation project with HAS Lifesciences. Submit target botanical actives, batch volume requirements, and dosage format specifications."
+        keywords="CDMO Project Intake, Contract Manufacturing Inquiry Pharma, Private Label Formulation Brief, Nutraceutical RFQ India, HAS Lifesciences Partnership"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">

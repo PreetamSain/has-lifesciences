@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- 01. Homepage -->
+  <url>
+    <loc>https://haslifesciences.com/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_cleanroom_hero_1787739262235.jpg</image:loc>
+      <image:title>HAS Lifesciences High-Tech Cleanroom Biomanufacturing Facility</image:title>
+      <image:caption>State-of-the-art cGMP automated cleanroom facility for botanical extraction and nutraceutical CDMO.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 02. Botanical Science & Dosage Capabilities -->
+  <url>
+    <loc>https://haslifesciences.com/capabilities</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_botanical_extraction_1787739370349.jpg</image:loc>
+      <image:title>Standardized Botanical Extraction & Phytochemistry</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_softgels_macro_1787739287054.jpg</image:loc>
+      <image:title>Vegetarian and Gelatin Softgel Encapsulation CDMO</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_gummies_macro_1787739307098.jpg</image:loc>
+      <image:title>Pectin Functional Nutraceutical Gummies Manufacturing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_effervescent_macro_1787820101278.jpg</image:loc>
+      <image:title>Effervescent Tablets & Hydration Formats</image:title>
+    </image:image>
+  </url>
+
+  <!-- 03. 78,000 Sq. Ft. Manufacturing Campus Infrastructure -->
+  <url>
+    <loc>https://haslifesciences.com/infrastructure</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_campus_hero_1787739337547.jpg</image:loc>
+      <image:title>HAS Lifesciences 78,000 Sq. Ft. Manufacturing Campus Jaipur</image:title>
+    </image:image>
+  </url>
+
+  <!-- 04. 10-Step CDMO Methodology & Turnkey Solutions -->
+  <url>
+    <loc>https://haslifesciences.com/contract-manufacturing</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 05. Analytical Testing & Quality Systems -->
+  <url>
+    <loc>https://haslifesciences.com/quality</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_analytical_hplc_lab_1787820264292.jpg</image:loc>
+      <image:title>Agilent HPLC Analytical Quality Control Laboratory</image:title>
+    </image:image>
+  </url>
+
+  <!-- 06. Packaging Technologies -->
+  <url>
+    <loc>https://haslifesciences.com/packaging</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_pharma_packaging_1787820244617.jpg</image:loc>
+      <image:title>Alu-Alu and Barrier Packaging Systems</image:title>
+    </image:image>
+  </url>
+
+  <!-- 07. R&D Phytotherapy Formulation -->
+  <url>
+    <loc>https://haslifesciences.com/research-development</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 08. About Us / Corporate Heritage -->
+  <url>
+    <loc>https://haslifesciences.com/about</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://haslifesciences.com/assets/generated/has_leadership_team_1787820287755.jpg</image:loc>
+      <image:title>HAS Lifesciences Leadership & Scientific Directorate</image:title>
+    </image:image>
+  </url>
+
+  <!-- 09. Partner & Technical Formulation Brief Intake -->
+  <url>
+    <loc>https://haslifesciences.com/partner</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 10. Contact & Corporate Desk -->
+  <url>
+    <loc>https://haslifesciences.com/contact</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

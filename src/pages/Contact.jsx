@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
+import SEO from '../components/SEO';
 
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-[#F8FAFC] text-[#030914] space-y-32 md:space-y-48 pb-36 font-telegraf">
+      <SEO
+        title="Contact & Corporate Desk | Jaipur Headquarters | HAS Lifesciences"
+        description="Get in touch with HAS Lifesciences Private Limited in Jaipur, Rajasthan. Access executive directorate, CDMO business development, and plant audit coordination."
+        keywords="Contact HAS Lifesciences, HAS Lifesciences Jaipur Address, Pharma CDMO Jaipur Phone, HAS Herbal Contact Email, Plant Audit Coordination"
+      />
       
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
