@@ -1,6 +1,17 @@
-<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="36" height="36" rx="8" fill="#0047FF"/>
-  <path d="M18 6L28 12V24L18 30L8 24V12L18 6Z" stroke="#00D2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M18 11V25M11 15L25 21M11 21L25 15" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-  <circle cx="18" cy="18" r="2.5" fill="#00D2FF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 349 372.48">
+  <defs>
+    <linearGradient id="favBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="100%" stop-color="#0052FF" />
+    </linearGradient>
+  </defs>
+  <rect fill="#030914" width="349" height="372.48" rx="60"/>
+  <g fill="url(#favBlue)">
+    <rect y="11.46" width="116.33" height="116.33" rx="12"/>
+    <rect x="116.33" y="127.79" width="116.33" height="116.33" rx="12"/>
+    <rect x="232.67" y="244.12" width="116.33" height="116.33" rx="12"/>
+    <rect x="232.67" y="11.46" width="116.33" height="116.33" rx="12" transform="translate(360.46 -221.21) rotate(90)"/>
+    <rect x="0" y="244.12" width="116.33" height="116.33" rx="12" transform="translate(360.46 244.12) rotate(90)"/>
+    <polyline points="232.67 97.23 202.11 127.79 202.11 158.35 232.67 158.35 263.22 127.79" fill="#00D2FF"/>
+  </g>
 </svg>
