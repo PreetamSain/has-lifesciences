@@ -113,10 +113,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
             
             <div className="lg:col-span-8 space-y-6">
-              <h1 className="font-architekt text-6xl sm:text-7xl md:text-8xl lg:text-[116px] xl:text-[132px] text-white tracking-[0.02em] leading-[0.88] uppercase select-none">
-                NATURE.<br />
-                SCIENCE.<br />
-                <HeroTypewriter />
+              <h1 className="font-architekt text-6xl sm:text-7xl md:text-8xl lg:text-[108px] xl:text-[124px] text-white tracking-[0.02em] leading-[0.92] uppercase select-none">
+                <span className="block">NATURE.</span>
+                <span className="block">SCIENCE.</span>
+                <span className="block whitespace-nowrap">
+                  <HeroTypewriter />
+                </span>
               </h1>
             </div>
 
