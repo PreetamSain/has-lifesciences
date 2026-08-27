@@ -8,7 +8,7 @@ export default function Infrastructure() {
   const levels = [
     {
       level: 1,
-      code: 'LVL-01-WET',
+      code: 'LEVEL 01',
       title: 'Level 01: Botanical Extraction & Wet Processing',
       badge: 'GROUND FLOOR • EXTRACTION & LIQUIDS',
       desc: 'Dedicated heavy processing floor equipped with falling-film vacuum evaporators, hydro-alcoholic percolation loops, rotary die softgel encapsulation suites, continuous gummy setting tunnels, and fresh herbal swaras juice extraction.',
@@ -23,7 +23,7 @@ export default function Infrastructure() {
     },
     {
       level: 2,
-      code: 'LVL-02-SLD',
+      code: 'LEVEL 02',
       title: 'Level 02: Solid Oral Dosage & <20% RH Suite',
       badge: 'FIRST FLOOR • COMPRESSION & DRYING',
       desc: 'Engineered for high-volume powder handling and tableting. Includes rapid high-shear granulators, fluid bed dryers (FBD), multi-station rotary tablet presses, automated coating pans, and an isolated <20% RH low-humidity room for effervescents.',
@@ -38,7 +38,7 @@ export default function Infrastructure() {
     },
     {
       level: 3,
-      code: 'LVL-03-PKG',
+      code: 'LEVEL 03',
       title: 'Level 03: High-Speed Packaging & QC Testing Labs',
       badge: 'SECOND FLOOR • PACKAGING & ANALYTICAL',
       desc: 'Houses automated packaging lines (Alu-Alu blister packaging, bottle induction sealing, sachet filling) alongside our analytical testing laboratory, microbiology isolation suites, stability chambers, and corporate offices.',
@@ -61,8 +61,8 @@ export default function Infrastructure() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 03 // INFRASTRUCTURE"
-          badge="[ CAMPUS MASTERPLAN ]"
+          tag="SECTION 03 • INFRASTRUCTURE"
+          badge="CAMPUS MASTERPLAN"
           headlineMain="~78,000 Sq. Ft. Integrated Campus."
           description="A multi-tier pharmaceutical and botanical manufacturing campus engineered from the ground up for strict zoning, zero cross-contamination, and high-throughput commercial scale."
           primaryBtnText="Explore Blueprint"
@@ -76,9 +76,8 @@ export default function Infrastructure() {
       {/* 2. INTERACTIVE 3-LEVEL BLUEPRINT EXPLORER */}
       <section id="blueprint" className="max-w-[1800px] mx-auto px-6 md:px-16 scroll-mt-32">
         <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">FACILITY BLUEPRINT // 3-TIER</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">///////////////////////////////////</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">[ ZONING SCHEMATIC ]</span>
+          <span className="monogram-badge">FACILITY BLUEPRINT</span>
+          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">THREE ZONED LEVELS</span>
         </div>
 
         {/* Level Switcher Buttons */}
@@ -94,8 +93,7 @@ export default function Infrastructure() {
               }`}
             >
               <div className="font-architekt text-xs uppercase tracking-widest font-bold mb-2 opacity-80 flex items-center justify-between">
-                <span>[ LEVEL 0{lvl.level} ]</span>
-                <span>{lvl.code}</span>
+                <span>LEVEL 0{lvl.level}</span>
               </div>
               <div className="font-architekt font-bold text-2xl">
                 {lvl.level === 1 ? 'Extraction & Liquids' : lvl.level === 2 ? 'Solids & Effervescents' : 'Packaging & Labs'}
@@ -132,7 +130,7 @@ export default function Infrastructure() {
           {/* Rooms Grid */}
           <div className="space-y-6 relative z-10">
             <div className="font-architekt text-xs uppercase text-white/50 tracking-widest">
-              [ ZONED CLEANROOM SUITES & OPERATIONAL SECTORS ]
+              ZONED CLEANROOM SUITES & OPERATIONAL SECTORS
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentData.rooms.map((room, rIdx) => (
@@ -140,7 +138,7 @@ export default function Infrastructure() {
                   key={rIdx}
                   className="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-4 hover:border-[#00D2FF] hover:bg-white/10 transition-colors"
                 >
-                  <span className="font-architekt text-[#00D2FF] text-sm">[{rIdx + 1 < 10 ? `0${rIdx + 1}` : rIdx + 1}]</span>
+                  <span className="font-architekt text-[#00D2FF] text-sm">{rIdx + 1 < 10 ? `0${rIdx + 1}` : rIdx + 1}</span>
                   <span className="font-telegraf text-sm sm:text-base text-slate-200">{room}</span>
                 </div>
               ))}
@@ -153,14 +151,13 @@ export default function Infrastructure() {
       {/* 3. HVAC & UTILITIES TECHNICAL SPECIFICATIONS */}
       <section className="max-w-[1800px] mx-auto px-6 md:px-16">
         <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">UTILITY ENGINEERING // SPECS</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">///////////////////////////////////</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">[ ENVIRONMENTAL CONTROL ]</span>
+          <span className="monogram-badge">UTILITY ENGINEERING</span>
+          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">ENVIRONMENTAL CONTROL & PURITY</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="glass-light glass-card-hover p-10 rounded-[36px] space-y-4">
-            <div className="font-architekt text-3xl font-bold text-[#0052FF]">[ 01 / HVAC ]</div>
+            <div className="font-architekt text-3xl font-bold text-[#0052FF]">01 • HVAC</div>
             <h3 className="font-architekt font-bold text-2xl text-[#030914]">HEPA Cleanroom Air</h3>
             <p className="font-telegraf text-slate-600 text-sm md:text-base leading-relaxed">
               AHU systems equipped with 0.3-micron terminal HEPA filtration ensuring positive air pressure and 20+ air changes per hour to prevent airborne particulate ingress.
@@ -168,7 +165,7 @@ export default function Infrastructure() {
           </div>
 
           <div className="glass-light glass-card-hover p-10 rounded-[36px] space-y-4">
-            <div className="font-architekt text-3xl font-bold text-[#0052FF]">[ 02 / WATER ]</div>
+            <div className="font-architekt text-3xl font-bold text-[#0052FF]">02 • WATER</div>
             <h3 className="font-architekt font-bold text-2xl text-[#030914]">USP Purified Water Loop</h3>
             <p className="font-telegraf text-slate-600 text-sm md:text-base leading-relaxed">
               Continuous circulation pharmaceutical water system utilizing double-pass reverse osmosis (RO) and EDI with sanitizing UV lamp arrays.
@@ -176,7 +173,7 @@ export default function Infrastructure() {
           </div>
 
           <div className="glass-light glass-card-hover p-10 rounded-[36px] space-y-4">
-            <div className="font-architekt text-3xl font-bold text-[#0052FF]">[ 03 / CLIMATE ]</div>
+            <div className="font-architekt text-3xl font-bold text-[#0052FF]">03 • CLIMATE</div>
             <h3 className="font-architekt font-bold text-2xl text-[#030914]">&lt;20% RH Dehumidification</h3>
             <p className="font-telegraf text-slate-600 text-sm md:text-base leading-relaxed">
               Desiccant rotor dehumidification for our effervescent and moisture-reactive encapsulation suites, guaranteeing product chemical stability.

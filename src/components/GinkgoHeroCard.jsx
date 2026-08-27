@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function GinkgoHeroCard({
-  tag = 'SECTION / OVERVIEW',
+  tag = 'SECTION • OVERVIEW',
   badge = 'SPECIFICATION',
   headlineMain = 'Title',
   headlineSub = '',
@@ -25,19 +25,18 @@ export default function GinkgoHeroCard({
         />
       )}
 
-      {/* Science Blue Ambient Glows & Technical Grid */}
+      {/* Science Blue Ambient Glows */}
       <div className="absolute -top-24 -left-24 w-[450px] h-[450px] bg-[#0052FF]/20 blur-[130px] pointer-events-none" />
       <div className="absolute -bottom-24 -right-24 w-[450px] h-[450px] bg-[#00D2FF]/15 blur-[130px] pointer-events-none" />
       <div className="absolute inset-0 blueprint-grid-dark opacity-30 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-[#030914]/60 pointer-events-none" />
 
       {/* Top Ticker & Monogram Badge */}
-      <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 font-architekt text-xs uppercase tracking-[0.25em] text-white/80 border-b border-white/15 pb-6">
+      <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 font-architekt text-xs uppercase tracking-[0.2em] text-white/80 border-b border-white/15 pb-6">
         <div className="flex items-center gap-3">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00D2FF] shadow-[0_0_10px_#00D2FF] animate-pulse" />
           <span className="font-bold text-white">{tag}</span>
         </div>
-        <div className="text-[#00D2FF] font-architekt tracking-widest hidden sm:block">///////////////////////////////////</div>
         <span className="monogram-badge-dark py-1 px-3.5 text-[10px]">
           {badge}
         </span>
@@ -75,7 +74,7 @@ export default function GinkgoHeroCard({
               to={secondaryBtnLink}
               className="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-architekt text-xs uppercase tracking-wider font-bold border border-white/20 transition-all backdrop-blur-md"
             >
-              [ {secondaryBtnText} ]
+              {secondaryBtnText}
             </Link>
           )}
         </div>

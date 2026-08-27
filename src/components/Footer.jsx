@@ -61,7 +61,7 @@ export default function Footer() {
         <div className="p-8 rounded-3xl bg-white/5 border border-white/10 text-xs text-slate-400 space-y-3 font-telegraf leading-relaxed">
           <div className="font-architekt text-[#00D2FF] font-bold tracking-widest uppercase flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#00D2FF]" />
-            <span>[ STATUTORY DISCLOSURE & FACILITY DEVELOPMENT NOTICE ]</span>
+            <span>STATUTORY DISCLOSURE & FACILITY DEVELOPMENT NOTICE</span>
           </div>
           <p>
             HAS Lifesciences Private Limited (formerly operating as HAS Herbal) is actively developing an integrated ~78,000 sq. ft. 3-level manufacturing campus engineered in strict accordance with international cGMP and WHO standards. All operational parameters, cleanroom HVAC classifications, rotary encapsulation rates, and platform capacities are forward-looking engineering benchmarks.

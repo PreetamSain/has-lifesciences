@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
 
 export default function ResearchDevelopment() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const pillars = [
     {
       num: '01',
-      code: 'RND-PHYTO-01',
+      code: 'PILLAR 01',
       title: 'Botanical Chemistry & Active Isolation',
       desc: 'Screening raw botanical materials for marker compounds, active principles, pesticide residue profiles, and heavy metal limits using high-performance chromatography.',
       tag: 'PHYTOCHEMISTRY LAB',
@@ -19,7 +23,7 @@ export default function ResearchDevelopment() {
     },
     {
       num: '02',
-      code: 'RND-DSG-02',
+      code: 'PILLAR 02',
       title: 'Formulation Design & Dosage Technology',
       desc: 'Overcoming delivery hurdles: lipid self-emulsification, low-humidity effervescent kinetics, taste-masking of bitter extracts, and dissolution optimization.',
       tag: 'DOSAGE ENGINEERING',
@@ -32,7 +36,7 @@ export default function ResearchDevelopment() {
     },
     {
       num: '03',
-      code: 'RND-SNS-03',
+      code: 'PILLAR 03',
       title: 'Sensory Science & Taste Masking',
       desc: 'Transforming potent, bitter, astringent herbal extracts into consumer-preferred chewable gummies, effervescent drinks, syrups, and flavoured nutritional powders.',
       tag: 'ORGANOLEPTIC SCIENCE',
@@ -45,7 +49,7 @@ export default function ResearchDevelopment() {
     },
     {
       num: '04',
-      code: 'RND-MET-04',
+      code: 'PILLAR 04',
       title: 'Analytical Method Development & Stability',
       desc: 'Developing in-house validated analytical methods for novel multi-herb mixtures, proprietary blends, and functional finished dosage matrixes.',
       tag: 'METHOD VALIDATION',
@@ -64,8 +68,8 @@ export default function ResearchDevelopment() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 07 // LABS & SCIENCE"
-          badge="[ R&D PHYTOTHERAPY ]"
+          tag="SECTION 07 • LABS & SCIENCE"
+          badge="R&D PHYTOTHERAPY"
           headlineMain="Science-Driven Formulation."
           description="At HAS Lifesciences, research and development is focused on solving real formulation, delivery, bioavailability, stability, and sensory challenges in botanical and nutraceutical products."
           primaryBtnText="Initiate R&D Brief"
@@ -79,9 +83,8 @@ export default function ResearchDevelopment() {
       {/* 2. FOUR CORE R&D PILLARS */}
       <section className="max-w-[1800px] mx-auto px-6 md:px-16">
         <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">R&D SCOPE // 4 PILLARS</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">///////////////////////////////////</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">[ SCIENTIFIC SCOPE ]</span>
+          <span className="monogram-badge">R&D SCOPE</span>
+          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">4 STRATEGIC PILLARS</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -93,9 +96,9 @@ export default function ResearchDevelopment() {
               <div>
                 <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-4">
                   <span className="font-architekt text-3xl font-bold text-[#0052FF]">
-                    [{item.num}]
+                    {item.num}
                   </span>
-                  <span className="font-architekt text-xs text-slate-400">
+                  <span className="font-architekt text-xs text-slate-400 font-bold">
                     {item.code}
                   </span>
                 </div>
@@ -114,7 +117,7 @@ export default function ResearchDevelopment() {
 
                 <div className="pt-4 border-t border-slate-200 space-y-3">
                   <div className="font-architekt text-[11px] uppercase text-slate-400 font-bold tracking-widest">
-                    [ LAB WORKFLOW ]
+                    LAB WORKFLOW
                   </div>
                   {item.points.map((pt, idx) => (
                     <div key={idx} className="flex items-start gap-2.5 text-xs font-architekt text-slate-700">
@@ -128,9 +131,9 @@ export default function ResearchDevelopment() {
               <div className="pt-6 border-t border-slate-200">
                 <Link
                   to="/partner"
-                  className="text-xs font-architekt uppercase tracking-wider text-[#030914] hover:text-[#0052FF] flex items-center justify-between transition-colors"
+                  className="text-xs font-architekt uppercase tracking-wider text-[#030914] hover:text-[#0052FF] flex items-center justify-between transition-colors font-bold"
                 >
-                  <span>[ Submit Lab Formulation Brief ]</span>
+                  <span>Submit Lab Formulation Brief</span>
                   <span>→</span>
                 </Link>
               </div>

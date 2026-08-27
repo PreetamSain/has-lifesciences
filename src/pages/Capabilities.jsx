@@ -1,96 +1,100 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
 
 export default function Capabilities() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const platforms = [
     {
       id: 'extraction',
-      num: '02A',
-      code: 'EXT-VAC-01',
-      title: 'Standardized Botanical Extraction',
-      headline: 'Vacuum Falling-Film & Phytomolecular Isolation',
-      desc: 'Engineered for high-yield isolation of active markers (Withanolides, Curcuminoids, Boswellic acids, Bacopasides). Features low-temperature hydro-alcoholic percolation loops, falling-film vacuum concentrators, and shelf vacuum dryers to prevent thermal degradation of delicate bioactives.',
+      num: '01',
+      code: 'EXT-VAC',
+      title: 'Botanical Extraction & Concentration',
+      headline: 'Phytochemistry & Active Standardization',
+      desc: 'Our primary extraction hall houses multi-stage falling-film vacuum evaporators, solid-liquid counter-current extractors, and automated filtration presses designed for standardized botanicals and classical Ayurvedic matrices.',
       specs: [
-        'Chromatographic Active Assay Verification (HPLC / HPTLC)',
-        'Solvent-Free Water / Ethanol Low-Temp Extraction Loops',
-        'Batch Capacities from 500 kg to Multi-Ton Commercial Scaling',
-        'Standardized Powder & High-Viscosity Paste Formats'
+        'Falling-film vacuum evaporation at low thermal load (<45°C)',
+        'HPLC active biomarker quantification (≥95% purity yields)',
+        'Stainless steel SS316 food & pharmaceutical contact surfaces',
+        'Solvent recovery loops (Ethanol, Hydro-alcoholic & Aqueous)'
       ],
       image: '/assets/generated/has_botanical_extraction_1787739370349.jpg'
     },
     {
       id: 'softgels',
-      num: '02B',
-      code: 'SFT-ROT-02',
+      num: '02',
+      code: 'ENCAP-SG',
       title: 'Rotary Die Softgel Encapsulation',
-      headline: 'High-Precision Lipid & Botanical Oil Delivery',
-      desc: 'Planned 8-inch high-speed rotary die softgel platform tailored for oil-soluble vitamins, botanical CO2 extracts, Omega-3 fatty acids, and CoQ10. Equipped with chilled micro-drum gelatin ribbons and automated optical sorting.',
+      headline: 'Lipid Solutions & Oil Suspensions',
+      desc: 'Precision continuous rotary die encapsulation lines capable of processing highly viscous oil suspensions, CoQ10 formulations, omega fatty acid matrices, and lipid-soluble herbal extracts with airtight hermetic sealing.',
       specs: [
-        'Gelatin & 100% Vegetarian (Plant-Based Pectin/Tapioca) Shells',
-        'Hermetically Sealed for Maximum Oxidation Defense',
-        'Custom Shapes: Oval, Oblong, Round, Tube Format',
-        'Automatic In-Line Laser Printing & Leak Inspection'
+        'Bovine, porcine, and 100% vegetarian seaweed carrageenan ribbons',
+        'Laser-inspected fill accuracy with ±1.5% volumetric tolerance',
+        'Continuous tumbling drying suites with dew point management',
+        'Enteric-coated softgels for targeted intestinal release'
       ],
       image: '/assets/generated/has_softgels_macro_1787739287054.jpg'
     },
     {
       id: 'gummies',
-      num: '02C',
-      code: 'GUM-PCT-03',
-      title: 'Nutraceutical Gummies Suite',
-      headline: 'Continuous Starch-Free Pectin Setting Technology',
-      desc: 'Modern consumer wellness gummy line featuring automated continuous batch cooking, active ingredient dosing, and stainless-steel quick-setting cooling tunnels.',
+      num: '03',
+      code: 'GUM-PUD',
+      title: 'Pectin & Gelatin Gummy Line',
+      headline: 'Functional Confectionery Delivery',
+      desc: 'Starchless automated depositor lines engineered specifically for active nutraceutical delivery. High heat-tolerance pectin bases prevent active botanical denaturation during deposition and curing.',
       specs: [
-        '100% Vegan Pectin Base (No Gelatin, Non-GMO Certified)',
-        'Active Botanical, Mineral, and Nootropic Fortification',
-        'Sugar-Free & Low-Glycemic Sweetener Systems',
-        'Multi-Flavor Layering & Functional Surface Sanding'
+        '100% citrus pectin, gelatin, and hybrid base formulations',
+        'Active load capacity up to 15% without flavor degradation',
+        'Organic tapioca & monk fruit sugar-free sweetening systems',
+        'Automated mineral sanding and anti-stick oil finishing'
       ],
       image: '/assets/generated/has_gummies_macro_1787739307098.jpg'
     },
     {
       id: 'effervescents',
-      num: '02D',
-      code: 'EFF-RH20-04',
-      title: 'Low-Humidity Effervescent Suite',
-      headline: 'Dedicated <20% RH Cleanroom Facility',
-      desc: 'Custom-engineered climate-controlled cleanroom (<20% Relative Humidity, 21°C) designed specifically to handle highly moisture-sensitive sodium bicarbonate and organic acid effervescent reactions.',
+      num: '04',
+      code: 'EFF-TAB',
+      title: 'Effervescent Tablet Technology',
+      headline: 'Rapid Dissolution & Instant Bioavailability',
+      desc: 'Operating within specialized low-humidity cleanroom suites (<20% relative humidity), our effervescent compression suites produce instantly soluble tablets containing electrolyte complexes, vitamins, and standardized botanical actives.',
       specs: [
-        'Rapid In-Glass Dissolution (<60 Seconds Clean Break)',
-        'Automated Desiccant-Cap Tube Packing & Induction Sealing',
-        'Electrolyte, Vitamin C, & Energy Hydration Formulas',
-        'Zero Sticking Rotary Compression Tooling'
+        'Desiccant dehumidification maintaining <20% relative humidity',
+        'Fast dissolution profile (<120 seconds in 200ml ambient water)',
+        'Desiccant-stoppered aluminium tube automated packaging',
+        'Complete taste masking of bitter herbal saponins and tannins'
       ],
       image: '/assets/generated/has_effervescent_macro_1787820101278.jpg'
     },
     {
       id: 'solids',
-      num: '02E',
-      code: 'SOL-TAB-05',
+      num: '05',
+      code: 'SOL-TAB',
       title: 'Solid Oral Tablets & Hard Capsules',
-      headline: 'High-Speed Rotary Compression & Auto-Filling',
-      desc: 'Comprehensive solid dosage production suite covering high-shear wet granulation, fluid bed drying (FBD), multi-station rotary tablet compression, aqueous film coating, and automatic capsule filling.',
+      headline: 'Bilayer Compression & Modified Release',
+      desc: 'High-tonnage rotary tablet presses equipped with real-time compression force monitoring, automated weight rejection, and aqueous/organic film coating pans for sustained, delayed, or rapid release.',
       specs: [
-        'Modified Release, Enteric Coating, & Bi-Layer Tablets',
-        'Vegetarian HPMC & Bovine Gelatin Shell Encapsulation',
-        'Micro-Pellet & Powder Combination Capsule Filling',
-        'Real-Time In-Line Weight and Hardness IPQC Logging'
+        'Double-rotary presses producing up to 250,000 tablets/hour',
+        'Bilayer tablet capability for incompatible dual active ingredients',
+        'Size 00, 0, 1, 2 vegetarian (HPMC) and gelatin capsule filling',
+        'Aqueous moisture-barrier and enteric pH-dependent coatings'
       ],
       image: '/assets/generated/has_tablets_macro_1787820225149.jpg'
     },
     {
       id: 'traditional',
-      num: '02F',
-      code: 'LIQ-PRA-06',
-      title: 'Classical Pravahi Kwath & Swaras',
-      headline: 'GMP-Standardized Ayurvedic Liquid Decoctions',
-      desc: 'Dedicated classical Ayurvedic processing floor featuring fresh herb crushing, steam-jacketed boiling kettles for Pravahi Kwath decoctions, multi-stage filtration, and aseptic liquid bottling.',
+      num: '06',
+      code: 'LIQ-BOT',
+      title: 'Ayurvedic Liquids, Syrups & Asava-Arishta',
+      headline: 'Classical & Contemporary Liquid Dosage',
+      desc: 'Closed-loop SS316 decoction and fermentation halls honoring traditional Ayurvedic texts (Sharngadhara Samhita, Charaka Samhita) paired with modern micro-filtration, pasteurization, and automatic bottling lines.',
       specs: [
-        'Fresh Herb Extraction & Cold Pressed Swaras Juices',
-        'Classical Asava, Arishta, and Modern Syrups',
-        'Glass Bottle & HDPE Packaging with Tamper-Evident Caps',
-        'Preservative-Free Nitrogen Dosing Options Available'
+        'SS316 temperature-controlled closed brewing & decoction vessels',
+        'Traditional self-generated natural fermentation chambers',
+        'Sugar-free prebiotic base formulations for modern diabetic care',
+        'High-speed rotary liquid filling, capping, and induction sealing'
       ],
       image: '/assets/generated/has_ayurvedic_liquid_1787820189306.jpg'
     }
@@ -102,10 +106,10 @@ export default function Capabilities() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 02 // DOSAGE INDEX"
-          badge="[ MANUFACTURING MATRIX ]"
+          tag="SECTION 02 • DOSAGE INDEX"
+          badge="MANUFACTURING PLATFORMS"
           headlineMain="Validated Dosage Platforms."
-          description="A comprehensive overview of our 9 specialized manufacturing suites — engineered to scale complex botanical formulations from laboratory prototypes into commercial high-speed production."
+          description="A comprehensive overview of our specialized manufacturing suites — engineered to scale complex botanical formulations from laboratory prototypes into commercial high-speed production."
           primaryBtnText="Explore All Platforms"
           primaryBtnLink="#extraction"
           secondaryBtnText="Submit Formulation Brief"
@@ -125,10 +129,9 @@ export default function Capabilities() {
             {/* Header Line */}
             <div className="flex items-center gap-6 border-b border-slate-200 pb-4 mb-12">
               <span className="monogram-badge">
-                {p.num} // {p.code}
+                PLATFORM {p.num} • {p.code}
               </span>
-              <span className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">///////////////////////////////////</span>
-              <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">[ SPECIFICATION SHEET ]</span>
+              <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">SPECIFICATION SHEET</span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
@@ -144,7 +147,7 @@ export default function Capabilities() {
                     {p.title}
                   </h2>
                   <div className="font-architekt text-sm uppercase text-[#0052FF] font-bold tracking-wider mt-3">
-                    [{p.headline}]
+                    {p.headline}
                   </div>
                 </div>
 
@@ -155,7 +158,7 @@ export default function Capabilities() {
                 {/* Technical Bullet Grid */}
                 <div className="space-y-4 pt-4 border-t border-slate-200">
                   <div className="font-architekt text-xs uppercase text-slate-400 tracking-widest">
-                    [ VALIDATED PARAMETERS & STANDARDS ]
+                    VALIDATED PARAMETERS & STANDARDS
                   </div>
                   <div className="space-y-3">
                     {p.specs.map((spec, sIdx) => (
@@ -178,7 +181,7 @@ export default function Capabilities() {
                 </div>
               </div>
 
-              {/* Right Column: 4K Panoramic Card */}
+              {/* Right Column: Panoramic Card */}
               <div className="lg:col-span-6">
                 <div className="rounded-[40px] overflow-hidden border border-slate-200 shadow-2xl bg-[#030914] group relative">
                   <div className="aspect-[4/3] overflow-hidden">
@@ -189,7 +192,7 @@ export default function Capabilities() {
                     />
                   </div>
                   <div className="p-8 bg-[#030914] text-white flex items-center justify-between font-architekt text-xs border-t border-white/10">
-                    <span className="text-[#00D2FF] font-bold">[ MATRIX: {p.num} // {p.code} ]</span>
+                    <span className="text-[#00D2FF] font-bold">PLATFORM {p.num} • {p.code}</span>
                     <span className="text-white/60">cGMP QUALIFIED</span>
                   </div>
                 </div>

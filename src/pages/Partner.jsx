@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle2, ArrowRight, Upload } from 'lucide-react';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
 
 export default function Partner() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -10,28 +14,21 @@ export default function Partner() {
     phone: '',
     dosageFormat: 'Softgel Encapsulation',
     targetActive: '',
-    estimatedVolume: 'Pilot Scale (50-100 kg)',
-    timeline: '3-6 Months',
+    batchVolume: '',
+    timeline: '',
     notes: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
 
   const formats = [
-    'Standardized Extraction',
+    'Botanical Extraction',
     'Softgel Encapsulation',
-    'Nutraceutical Gummies',
-    'Low-Humidity Effervescents',
-    'Tablets & Capsules',
-    'Pravahi Kwath Liquids',
-    'Complete Turnkey Development'
-  ];
-
-  const volumes = [
-    'R&D Lab Batch (1-5 kg)',
-    'Pilot Scale (50-100 kg)',
-    'Commercial Run (500-2,000 kg)',
-    'Industrial Scale (5,000+ kg)'
+    'Pectin / Gelatin Gummies',
+    'Effervescent Tablets',
+    'Bilayer & Solid Tablets',
+    'Ayurvedic Liquid / Kwath',
+    'Multiple Dosage Formats'
   ];
 
   const handleSubmit = (e) => {
@@ -45,8 +42,8 @@ export default function Partner() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 08 // PROJECT INTAKE"
-          badge="[ CDMO ENGAGEMENT ]"
+          tag="SECTION 08 • PROJECT INTAKE"
+          badge="CDMO ENGAGEMENT"
           headlineMain="Initiate A Formulation Project."
           description="Submit your product specifications, target botanical actives, dosage format, and volume requirements to our technical formulation team."
           primaryBtnText="Complete Project Intake"
@@ -60,9 +57,8 @@ export default function Partner() {
       {/* 2. TECHNICAL PROJECT INTAKE FORM */}
       <section id="intake-form" className="max-w-[1400px] mx-auto px-6 md:px-16 scroll-mt-32">
         <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">PROJECT INTAKE // HAS-FORM-08</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">///////////////////////////////////</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">[ TECHNICAL SPECIFICATION SHEET ]</span>
+          <span className="monogram-badge">PROJECT INTAKE</span>
+          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">TECHNICAL SPECIFICATION SHEET</span>
         </div>
 
         <div className="glass-light rounded-[44px] p-8 sm:p-14 md:p-20 shadow-2xl">
@@ -81,7 +77,7 @@ export default function Partner() {
                 onClick={() => setSubmitted(false)}
                 className="mt-6 px-10 py-4 rounded-full bg-[#0052FF] text-white font-architekt text-xs uppercase tracking-widest hover:bg-[#0036B3] transition-colors shadow-lg"
               >
-                [ Submit Another Project Brief ]
+                Submit Another Project Brief
               </button>
             </div>
           ) : (
@@ -90,7 +86,7 @@ export default function Partner() {
               {/* Form Section 1: Organization & Contact */}
               <div className="space-y-6">
                 <div className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold border-b border-slate-200 pb-3">
-                  01 // ORGANIZATION & PRINCIPAL CONTACT
+                  01 • ORGANIZATION & PRINCIPAL CONTACT
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -101,7 +97,7 @@ export default function Partner() {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Dr. Aryan Sharma"
+                      placeholder="e.g. Dr. Rajesh Sharma"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-300 text-[#030914] text-sm focus:outline-none focus:border-[#0052FF] focus:ring-2 focus:ring-[#0052FF]/20 font-telegraf"
@@ -110,12 +106,12 @@ export default function Partner() {
 
                   <div>
                     <label className="block text-xs font-architekt uppercase tracking-wider text-[#030914] mb-2">
-                      Company / Brand Entity *
+                      Company / Organization *
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Pure Botanics Global Ltd."
+                      placeholder="e.g. Phytomed Global Corp"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-300 text-[#030914] text-sm focus:outline-none focus:border-[#0052FF] focus:ring-2 focus:ring-[#0052FF]/20 font-telegraf"
@@ -129,7 +125,7 @@ export default function Partner() {
                     <input
                       type="email"
                       required
-                      placeholder="e.g. aryan@purebotanics.com"
+                      placeholder="e.g. r.sharma@phytomed.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-300 text-[#030914] text-sm focus:outline-none focus:border-[#0052FF] focus:ring-2 focus:ring-[#0052FF]/20 font-telegraf"
@@ -138,12 +134,11 @@ export default function Partner() {
 
                   <div>
                     <label className="block text-xs font-architekt uppercase tracking-wider text-[#030914] mb-2">
-                      Direct Telephone *
+                      Direct Telephone / WhatsApp
                     </label>
                     <input
                       type="tel"
-                      required
-                      placeholder="e.g. +91 98765 43210"
+                      placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-300 text-[#030914] text-sm focus:outline-none focus:border-[#0052FF] focus:ring-2 focus:ring-[#0052FF]/20 font-telegraf"
@@ -155,7 +150,7 @@ export default function Partner() {
               {/* Form Section 2: Dosage Platform Selection */}
               <div className="space-y-6">
                 <div className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold border-b border-slate-200 pb-3">
-                  02 // TARGET DOSAGE DELIVERY FORMAT
+                  02 • TARGET DOSAGE DELIVERY FORMAT
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -179,7 +174,7 @@ export default function Partner() {
               {/* Form Section 3: Batch Volume & Actives */}
               <div className="space-y-6">
                 <div className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold border-b border-slate-200 pb-3">
-                  03 // FORMULATION & VOLUME PARAMETERS
+                  03 • FORMULATION & VOLUME PARAMETERS
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -198,42 +193,44 @@ export default function Partner() {
 
                   <div>
                     <label className="block text-xs font-architekt uppercase tracking-wider text-[#030914] mb-2">
-                      Estimated Initial Batch Volume
+                      Anticipated Commercial Batch Quantity
                     </label>
-                    <select
-                      value={formData.estimatedVolume}
-                      onChange={(e) => setFormData({ ...formData, estimatedVolume: e.target.value })}
+                    <input
+                      type="text"
+                      placeholder="e.g. 50,000 units / month"
+                      value={formData.batchVolume}
+                      onChange={(e) => setFormData({ ...formData, batchVolume: e.target.value })}
                       className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-300 text-[#030914] text-sm focus:outline-none focus:border-[#0052FF] focus:ring-2 focus:ring-[#0052FF]/20 font-telegraf"
-                    >
-                      {volumes.map((v) => (
-                        <option key={v} value={v}>{v}</option>
-                      ))}
-                    </select>
+                    />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-xs font-architekt uppercase tracking-wider text-[#030914] mb-2">
-                    Project Notes / Special Technical Requirements
+                    Project Scope, Delivery Specifications & Notes
                   </label>
                   <textarea
                     rows={4}
-                    placeholder="Provide details on target markets, regulatory requirements (FSSAI/AYUSH/US FDA), packaging format, or stability parameters..."
+                    placeholder="Provide details on bioavailability goals, organic certifications, packaging requirements (blister vs bottle), or export destinations..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-300 text-[#030914] text-sm focus:outline-none focus:border-[#0052FF] focus:ring-2 focus:ring-[#0052FF]/20 font-telegraf"
+                    className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-300 text-[#030914] text-sm focus:outline-none focus:border-[#0052FF] focus:ring-2 focus:ring-[#0052FF]/20 font-telegraf resize-none"
                   />
                 </div>
               </div>
 
-              {/* Submit Button */}
-              <div className="pt-4">
+              {/* Submit CTA */}
+              <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div className="text-xs text-slate-500 font-telegraf">
+                  * All technical submissions are governed by our mutual non-disclosure and confidentiality protocol.
+                </div>
+
                 <button
                   type="submit"
-                  className="colossal-big-button w-full sm:w-auto cursor-pointer"
+                  className="w-full sm:w-auto px-10 py-5 rounded-full bg-[#0052FF] hover:bg-[#0036B3] text-white font-architekt text-xs uppercase tracking-widest font-bold transition-all shadow-xl shadow-blue-500/25 flex items-center justify-center gap-3 cursor-pointer"
                 >
-                  <span>Transmit Technical Project Brief</span>
-                  <span className="plus-icon">+</span>
+                  <span>Transmit Technical Brief</span>
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
 

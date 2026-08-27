@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
 
 export default function Packaging() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const formats = [
     {
       num: '01',
-      code: 'PKG-BLS-01',
+      code: 'LINE 01',
       title: 'Alu-Alu & PVDC Blister Packing',
       category: 'SOLID ORAL PROTECTION',
       desc: 'High-barrier cold-form aluminum/aluminum and thermoform PVDC blistering engineered for extreme moisture and oxygen protection of moisture-sensitive tablets and softgels.',
@@ -14,7 +18,7 @@ export default function Packaging() {
     },
     {
       num: '02',
-      code: 'PKG-BTL-02',
+      code: 'LINE 02',
       title: 'Automated HDPE & Amber Glass Bottling',
       category: 'SOLID & CAPSULE CONTAINERS',
       desc: 'Complete automated bottling lines with multi-channel electronic counting, cotton insertion, desiccant canister dispensing, and electromagnetic induction foil sealing.',
@@ -22,7 +26,7 @@ export default function Packaging() {
     },
     {
       num: '03',
-      code: 'PKG-TUB-03',
+      code: 'LINE 03',
       title: 'Effervescent Desiccant Tubes',
       category: 'LOW-HUMIDITY FORMAT',
       desc: 'Automated tube filling and spring-loaded desiccant cap insertion for 10-count and 20-count effervescent hydration tablets, packed in low-humidity cleanrooms.',
@@ -30,7 +34,7 @@ export default function Packaging() {
     },
     {
       num: '04',
-      code: 'PKG-STK-04',
+      code: 'LINE 04',
       title: 'Stick Packs & Sachets',
       category: 'ON-THE-GO POWDERS',
       desc: 'High-speed vertical form-fill-seal (VFFS) multi-lane packaging for botanical drink mixes, electrolyte powders, and single-serve granule sachets.',
@@ -38,7 +42,7 @@ export default function Packaging() {
     },
     {
       num: '05',
-      code: 'PKG-LIQ-05',
+      code: 'LINE 05',
       title: 'Aseptic Liquid & Swaras Bottling',
       category: 'PRAVAHI KWATH DECOCTIONS',
       desc: 'Linear automatic liquid filling lines with volumetric piston pumps for classical Ayurvedic decoctions, cold-pressed Swaras juices, and functional syrups.',
@@ -46,7 +50,7 @@ export default function Packaging() {
     },
     {
       num: '06',
-      code: 'PKG-SEC-06',
+      code: 'LINE 06',
       title: 'Secondary & Outer Shipper Cartoning',
       category: 'COMMERCIAL DISTRIBUTION',
       desc: 'Automated case packing, corrugated master shipper box erection, check-weighing, and GS1 2D DataMatrix batch serialization.',
@@ -60,8 +64,8 @@ export default function Packaging() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 07 // PACKAGING"
-          badge="[ AUTOMATED LINES ]"
+          tag="SECTION 07 • PACKAGING"
+          badge="AUTOMATED PACKAGING"
           headlineMain="Barrier-Engineered Packaging."
           description="In-line automated packaging solutions ensuring physical stability, moisture resistance, and shelf-ready retail presentation across global markets."
           primaryBtnText="Explore Packaging Lines"
@@ -75,9 +79,8 @@ export default function Packaging() {
       {/* 2. PACKAGING FORMATS GRID */}
       <section id="packaging-lines" className="max-w-[1800px] mx-auto px-6 md:px-16 scroll-mt-32">
         <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">PACKAGING MATRIX // 6 LINES</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">///////////////////////////////////</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">[ BARRIER PROTECTION ]</span>
+          <span className="monogram-badge">PACKAGING CAPABILITIES</span>
+          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">6 INTEGRATED AUTOMATED LINES</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -89,7 +92,7 @@ export default function Packaging() {
               <div>
                 <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-4">
                   <span className="font-architekt text-3xl font-bold text-[#0052FF]">
-                    [{f.num}]
+                    {f.num}
                   </span>
                   <span className="font-architekt text-xs text-slate-400">
                     {f.code}
@@ -110,7 +113,7 @@ export default function Packaging() {
 
                 <div className="space-y-2 border-t border-slate-200 pt-4">
                   <div className="font-architekt text-[11px] uppercase text-slate-400 font-bold tracking-widest">
-                    [ LINE SPECIFICATIONS ]
+                    LINE SPECIFICATIONS
                   </div>
                   {f.specs.map((spec, sIdx) => (
                     <div key={sIdx} className="flex items-center gap-2 text-xs font-architekt text-slate-700">
@@ -124,9 +127,9 @@ export default function Packaging() {
               <div className="pt-6 border-t border-slate-200">
                 <Link
                   to="/partner"
-                  className="text-xs font-architekt uppercase tracking-wider text-[#030914] hover:text-[#0052FF] flex items-center justify-between transition-colors"
+                  className="text-xs font-architekt uppercase tracking-wider text-[#030914] hover:text-[#0052FF] flex items-center justify-between transition-colors font-bold"
                 >
-                  <span>[ Request Packaging Spec Sheet ]</span>
+                  <span>Request Packaging Specifications</span>
                   <span>→</span>
                 </Link>
               </div>

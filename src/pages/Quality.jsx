@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GinkgoHeroCard from '../components/GinkgoHeroCard';
 
 export default function Quality() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const steps = [
     { num: '01', code: 'QC-ID-01', title: 'Botanical Voucher Verification', desc: 'Macroscopic, microscopic, and TLC botanical identity fingerprinting against Ayurvedic Pharmacopoeia (API) reference standards.' },
     { num: '02', code: 'QC-MTL-02', title: 'Heavy Metals ICP-MS Screening', desc: 'Trace elemental quantification for Lead (Pb), Cadmium (Cd), Mercury (Hg), and Arsenic (As) adhering strictly to USP <2232> limits.' },
@@ -21,8 +25,8 @@ export default function Quality() {
       {/* 1. HERO */}
       <section className="pt-32 md:pt-36 px-6 md:px-16">
         <GinkgoHeroCard
-          tag="SECTION 05 // QUALITY & QC"
-          badge="[ ANALYTICAL PROTOCOL ]"
+          tag="SECTION 05 • QUALITY & QC"
+          badge="ANALYTICAL PROTOCOL"
           headlineMain="9-Stage Quality Framework."
           description="Analytical testing, active marker chromatography, and cGMP batch release protocols ensuring absolute botanical purity and pharmacological consistency."
           primaryBtnText="Explore QC Steps"
@@ -33,12 +37,11 @@ export default function Quality() {
         />
       </section>
 
-      {/* 2. 9-STAGE QUALITY PROTOCOLS (Glass Card Grid) */}
+      {/* 2. 9-STAGE QUALITY PROTOCOLS */}
       <section id="framework" className="max-w-[1800px] mx-auto px-6 md:px-16 scroll-mt-32">
         <div className="flex items-center gap-6 border-b border-slate-300 pb-4 mb-16">
-          <span className="monogram-badge">9-STAGE PROTOCOLS // GATES</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-[#0052FF] font-bold">///////////////////////////////////</span>
-          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">[ BATCH ASSAY VERIFICATION ]</span>
+          <span className="monogram-badge">9-STAGE PROTOCOLS</span>
+          <span className="font-architekt text-xs uppercase tracking-widest text-slate-500">BATCH ASSAY VERIFICATION</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -49,9 +52,9 @@ export default function Quality() {
             >
               <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                 <span className="font-architekt text-3xl font-bold text-[#0052FF] group-hover:scale-110 transition-transform">
-                  STAGE [{step.num}]
+                  STAGE {step.num}
                 </span>
-                <span className="font-architekt text-xs text-slate-400">[{step.code}]</span>
+                <span className="font-architekt text-xs text-slate-400">{step.code}</span>
               </div>
               <h3 className="font-architekt font-bold text-2xl text-[#030914] leading-tight">
                 {step.title}
@@ -70,8 +73,7 @@ export default function Quality() {
           
           <div className="flex items-center gap-6 border-b border-white/20 pb-4">
             <span className="monogram-badge-dark">INSTRUMENTAL SUITES</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">///////////////////////////////////</span>
-            <span className="font-architekt text-xs uppercase tracking-widest text-white/60">[ TESTING LABS ]</span>
+            <span className="font-architekt text-xs uppercase tracking-widest text-white/60">ANALYTICAL TESTING LABS</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -93,25 +95,25 @@ export default function Quality() {
 
             <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-3 hover:border-[#00D2FF] transition-colors">
-                <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">[ HPLC & UPLC ]</div>
+                <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">HPLC & UPLC</div>
                 <h4 className="font-architekt font-bold text-xl text-white">High-Performance Liquid Chromatography</h4>
                 <p className="font-telegraf text-xs text-slate-400">Quantification of Withanolides, Curcumin, and secondary botanical metabolites.</p>
               </div>
 
               <div className="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-3 hover:border-[#00D2FF] transition-colors">
-                <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">[ HPTLC ]</div>
+                <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">HPTLC</div>
                 <h4 className="font-architekt font-bold text-xl text-white">High-Performance Thin Layer Chromatography</h4>
                 <p className="font-telegraf text-xs text-slate-400">Botanical fingerprinting and identification against pharmacopoeial monographs.</p>
               </div>
 
               <div className="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-3 hover:border-[#00D2FF] transition-colors">
-                <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">[ FTIR ]</div>
+                <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">FTIR</div>
                 <h4 className="font-architekt font-bold text-xl text-white">Fourier-Transform Infrared Spectrometry</h4>
                 <p className="font-telegraf text-xs text-slate-400">Raw material excipient validation and molecular structure verification.</p>
               </div>
 
               <div className="p-8 rounded-3xl bg-white/5 border border-white/10 space-y-3 hover:border-[#00D2FF] transition-colors">
-                <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">[ STABILITY ]</div>
+                <div className="font-architekt text-xs uppercase tracking-widest text-[#00D2FF] font-bold">STABILITY</div>
                 <h4 className="font-architekt font-bold text-xl text-white">ICH Climatic Chambers</h4>
                 <p className="font-telegraf text-xs text-slate-400">Accelerated & real-time stability testing for multi-zone global compliance.</p>
               </div>

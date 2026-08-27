@@ -129,9 +129,9 @@ export default function Navbar() {
           <div className="max-w-6xl mx-auto py-12 space-y-12">
             
             <div className="flex items-center justify-between border-b border-white/20 pb-6">
-              <span className="text-xs uppercase tracking-[0.3em] text-[#00D2FF] font-bold flex items-center gap-2">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#00D2FF] font-bold flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#00D2FF] animate-pulse" />
-                <span>[ MASTER DIRECTORY INDEX ]</span>
+                <span>MASTER DIRECTORY INDEX</span>
               </span>
               <button
                 onClick={() => setIndexOpen(false)}
