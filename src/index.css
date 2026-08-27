@@ -1,0 +1,325 @@
+@import "tailwindcss";
+
+/* ========================================================================= */
+/* 1. EXACT COLOSSAL SCIENTIFIC TYPOGRAPHY (NB Architekt Std + Telegraf)     */
+/* ========================================================================= */
+
+/* NB Architekt Light (Architectural Precision Light) */
+@font-face {
+  font-family: 'NB Architekt Light';
+  src: url('/fonts/NBArchitektStd-Light.woff2') format('woff2'),
+       url('/fonts/NBArchitektStd-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* NB Architekt Std (Primary Architectural Headline & Technical Monogram) */
+@font-face {
+  font-family: 'NB Architekt Std';
+  src: url('/fonts/NBArchitektStd-Regular.woff2') format('woff2'),
+       url('/fonts/NBArchitektStd-Regular.woff') format('woff');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Telegraf (Synthetic & Organic High-Tech Body Sans) */
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/Telegraf-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telegraf Light';
+  src: url('/fonts/Telegraf-UltraLight.woff2') format('woff2');
+  font-weight: 200 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telegraf Bold';
+  src: url('/fonts/Telegraf-UltraBold.woff2') format('woff2');
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Supplemental Söhne / PP Neue Montreal Fallbacks */
+@font-face {
+  font-family: 'Sohne Mono';
+  src: url('/fonts/TestSohneMono-Buch.otf') format('opentype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================================================================= */
+/* 2. TAILWIND DESIGN THEME VARIABLES (Exact Colossal System)                */
+/* ========================================================================= */
+@theme {
+  --font-display: 'NB Architekt Std', 'NB Architekt Light', monospace, sans-serif;
+  --font-sans: 'Telegraf', 'Telegraf Light', -apple-system, sans-serif;
+  --font-mono: 'NB Architekt Std', 'NB Architekt Light', monospace;
+  --font-monogram: 'NB Architekt Std', monospace;
+  --font-architekt: 'NB Architekt Std', monospace;
+  --font-architekt-light: 'NB Architekt Light', monospace;
+  --font-telegraf: 'Telegraf', sans-serif;
+
+  --color-science-blue: #0052FF;
+  --color-science-blue-light: #3B82F6;
+  --color-science-blue-dark: #0036B3;
+  --color-science-cyan: #00D2FF;
+  --color-biotech-navy: #030914;
+  --color-biotech-dark: #07152B;
+  --color-ice-white: #F8FAFC;
+  --color-pure-white: #FFFFFF;
+}
+
+/* ========================================================================= */
+/* 3. BASE BODY & GLOBAL STYLES                                              */
+/* ========================================================================= */
+body {
+  font-family: var(--font-sans);
+  color: #030914;
+  background-color: #F8FAFC;
+  font-size: 17px;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+/* ========================================================================= */
+/* 4. SCIENTIFIC & MONOGRAM TYPOGRAPHIC UTILITIES                            */
+/* ========================================================================= */
+.font-architekt {
+  font-family: 'NB Architekt Std', monospace;
+  letter-spacing: 0.06em;
+}
+
+.font-architekt-light {
+  font-family: 'NB Architekt Light', monospace;
+  letter-spacing: 0.04em;
+}
+
+.font-telegraf {
+  font-family: 'Telegraf', sans-serif;
+}
+
+.font-monogram {
+  font-family: 'NB Architekt Std', monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.monogram-badge {
+  font-family: 'NB Architekt Std', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 4px;
+  background: rgba(0, 82, 255, 0.08);
+  border: 1px solid rgba(0, 82, 255, 0.28);
+  color: #0052FF;
+}
+
+.monogram-badge-dark {
+  font-family: 'NB Architekt Std', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 4px;
+  background: rgba(0, 210, 255, 0.12);
+  border: 1px solid rgba(0, 210, 255, 0.35);
+  color: #00D2FF;
+}
+
+/* ========================================================================= */
+/* 5. GLASSMORPHISM & ELEVATED CARDS                                         */
+/* ========================================================================= */
+.glass-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 20px 45px -15px rgba(0, 82, 255, 0.07), 0 0 0 1px rgba(0, 82, 255, 0.04);
+}
+
+.glass-dark {
+  background: rgba(7, 21, 43, 0.88);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px -15px rgba(0, 82, 255, 0.16), 0 0 0 1px rgba(0, 82, 255, 0.3);
+  border-color: rgba(0, 82, 255, 0.35);
+}
+
+/* ========================================================================= */
+/* 6. GRADIENT TEXT & SPECIAL EFFECTS                                        */
+/* ========================================================================= */
+.text-gradient-blue {
+  background: linear-gradient(135deg, #0052FF 0%, #00D2FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Colossal Box Tag */
+.colossal-box {
+  font-family: 'NB Architekt Std', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 4px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* ========================================================================= */
+/* 7. COLOSSAL SIGNATURE BIG BUTTON                                          */
+/* ========================================================================= */
+.colossal-big-button {
+  border-radius: 9999px;
+  background: #030914;
+  border: 1px solid #030914;
+  padding: 16px 52px 16px 28px;
+  font-family: 'NB Architekt Std', monospace;
+  font-size: clamp(13px, 0.95vw, 16px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 30px -10px rgba(3, 9, 20, 0.3);
+}
+
+.colossal-big-button:hover {
+  background: #0052FF;
+  border-color: #0052FF;
+  color: #FFFFFF;
+  box-shadow: 0 20px 40px -10px rgba(0, 82, 255, 0.5);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.colossal-big-button .plus-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'NB Architekt Std', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  transition: transform 0.4s ease;
+}
+
+.colossal-big-button:hover .plus-icon {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.colossal-big-button.light {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.colossal-big-button.light:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #0052FF;
+  box-shadow: 0 20px 40px -10px rgba(255, 255, 255, 0.4);
+}
+
+/* Colossal Target Disc with Pulsing Center Dot */
+.colossal-disc {
+  width: 42px;
+  height: 42px;
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colossal-dot-cyan {
+  width: 8px;
+  height: 8px;
+  background: #00D2FF;
+  border-radius: 9999px;
+  box-shadow: 0 0 14px #00D2FF;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+.colossal-dot-green {
+  width: 8px;
+  height: 8px;
+  background: #0052FF;
+  border-radius: 9999px;
+  box-shadow: 0 0 14px #0052FF;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+}
+
+/* Blueprint Grid Lines */
+.blueprint-grid-light {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 82, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 82, 255, 0.05) 1px, transparent 1px);
+}
+
+.blueprint-grid-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
