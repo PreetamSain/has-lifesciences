@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import TypewriterText from '../components/TypewriterText';
+import HeroTypewriter from '../components/HeroTypewriter';
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
@@ -115,7 +116,7 @@ export default function Home() {
               <h1 className="font-architekt text-6xl sm:text-7xl md:text-8xl lg:text-[116px] xl:text-[132px] text-white tracking-[0.02em] leading-[0.88] uppercase select-none">
                 NATURE.<br />
                 SCIENCE.<br />
-                <span className="text-gradient-blue">NEXT.</span>
+                <HeroTypewriter />
               </h1>
             </div>
 
