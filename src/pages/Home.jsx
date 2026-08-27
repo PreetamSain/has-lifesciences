@@ -5,8 +5,6 @@ import {
   FlaskConical, Sparkles, Building2, Microchip, Layers, 
   Activity, RefreshCw, BarChart3, Database, Globe, ChevronRight, Dna, Factory
 } from 'lucide-react';
-import HeroTrailer from '../components/HeroTrailer';
-import GinkgoHeroCard from '../components/GinkgoHeroCard';
 
 export default function Home() {
   useEffect(() => {
@@ -86,9 +84,92 @@ export default function Home() {
     <div className="w-full min-h-screen bg-[#030914] text-white">
       
       {/* ========================================================================= */}
-      {/* SECTION 00: CINEMATIC FULL-SCREEN HERO TRAILER (Colossal-Style Rapid Cuts) */}
+      {/* SECTION 00: CINEMATIC FULL-SCREEN HERO (SINGLE 4K IMAGE)                  */}
       {/* ========================================================================= */}
-      <HeroTrailer />
+      <section id="section-hero" className="relative w-full min-h-screen bg-[#030914] text-white flex flex-col justify-between pt-32 pb-16 px-6 md:px-16 overflow-hidden">
+        
+        {/* 4K Background Cleanroom Visual */}
+        <img
+          src="/assets/generated/has_cleanroom_hero_1787739262235.jpg"
+          alt="HAS Lifesciences High-Tech Cleanroom"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-35 mix-blend-luminosity scale-105 pointer-events-none"
+        />
+        
+        {/* Glowing Science Blue Radial Gradients */}
+        <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-[#0052FF]/25 blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-10 right-0 w-[500px] h-[500px] rounded-full bg-[#00D2FF]/20 blur-[130px] pointer-events-none" />
+        <div className="absolute inset-0 blueprint-grid-dark opacity-30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-[#030914]/80 pointer-events-none" />
+
+        {/* Top Header Row */}
+        <div className="relative z-10 max-w-[1800px] mx-auto w-full pt-4">
+          <div className="flex flex-wrap items-center justify-between gap-4 font-architekt text-xs uppercase tracking-[0.2em] text-white/80 border-b border-white/15 pb-4">
+            <div className="flex items-center gap-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#00D2FF] shadow-[0_0_12px_#00D2FF] animate-pulse" />
+              <span className="font-bold text-white">THE SCIENCE OF BOTANICALS. THE BUSINESS OF DISCOVERY.</span>
+            </div>
+            <div className="text-white/60 text-xs font-architekt uppercase tracking-widest">STATE-OF-THE-ART CDMO CAMPUS</div>
+          </div>
+        </div>
+
+        {/* Hero Center Typography */}
+        <div className="relative z-10 max-w-[1800px] mx-auto w-full my-auto py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+            
+            <div className="lg:col-span-8 space-y-6">
+              <div className="monogram-badge-dark">
+                <Dna className="w-3.5 h-3.5 text-[#00D2FF]" />
+                <span>INTEGRATED CDMO PLATFORM</span>
+              </div>
+
+              <h1 className="font-architekt text-6xl sm:text-7xl md:text-8xl lg:text-[116px] xl:text-[132px] text-white tracking-[0.02em] leading-[0.88] uppercase select-none">
+                NATURE.<br />
+                SCIENCE.<br />
+                <span className="text-gradient-blue">NEXT.</span>
+              </h1>
+            </div>
+
+            <div className="lg:col-span-4 space-y-8 pb-4">
+              <div className="colossal-disc border-white/40">
+                <div className="colossal-dot-cyan" />
+              </div>
+
+              <p className="font-telegraf text-slate-200 text-lg sm:text-xl md:text-2xl leading-[1.6] font-normal">
+                Building India's premier integrated CDMO for standardized botanical extraction, classical Ayurveda, and advanced nutraceutical delivery systems.
+              </p>
+
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                <Link
+                  to="/capabilities"
+                  className="colossal-big-button light"
+                >
+                  <span>Explore Capabilities</span>
+                  <span className="plus-icon">+</span>
+                </Link>
+
+                <Link
+                  to="/partner"
+                  className="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-architekt text-xs uppercase tracking-wider font-bold border border-white/20 transition-all backdrop-blur-md"
+                >
+                  Initiate Project Brief
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Hero Bottom Metric Strip */}
+        <div className="relative z-10 max-w-[1800px] mx-auto w-full border-t border-white/15 pt-6 font-architekt text-xs text-white/60 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <span className="text-[#00D2FF]">●</span>
+            <span>CAMPUS: ~78,000 SQ. FT. MULTI-LEVEL PLATFORM</span>
+          </div>
+          <div className="text-[11px]">STANDARDS: cGMP • HPLC ASSAYS • CLASS 10,000 CLEANROOMS</div>
+          <div className="text-[#00D2FF] font-bold">SCROLL DOWN TO EXPLORE ↓</div>
+        </div>
+
+      </section>
 
       {/* ========================================================================= */}
       {/* SECTION 01: THE BOTANICAL EVOLUTION                                       */}
