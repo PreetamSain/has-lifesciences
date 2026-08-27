@@ -65,11 +65,9 @@ export default function Navbar() {
         }`}>
           <div className="max-w-[1800px] mx-auto flex items-center justify-between">
             
-            {/* Logo with Live Status Dot */}
+            {/* Logo */}
             <div className="flex items-center gap-6">
-              <Link to="/" className="flex items-center gap-3 group">
-                <Logo size="default" />
-              </Link>
+              <Logo size="default" />
             </div>
 
             {/* Desktop Navigation Groups with Colossal NB Architekt Styling */}
