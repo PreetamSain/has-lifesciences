@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   FlaskConical, 
@@ -11,8 +11,15 @@ import {
   ChevronDown
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import TypewriterText from '../components/TypewriterText';
 
 export default function Home() {
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -545,16 +552,21 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* FREQUENTLY ASKED QUESTIONS                                                */}
+      {/* FREQUENTLY ASKED QUESTIONS (LIVE TYPEWRITER ACCORDION)                     */}
       {/* ========================================================================= */}
       <section className="py-28 px-6 md:px-16 bg-[#030914] text-white">
         <div className="max-w-[1400px] mx-auto space-y-16">
           
-          <h2 className="font-architekt text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
-            Frequently Asked Questions
-          </h2>
+          <div className="space-y-4">
+            <h2 className="font-architekt text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
+              Frequently Asked Questions
+            </h2>
+            <p className="font-telegraf text-slate-400 text-base sm:text-lg">
+              Click on any question to view live analytical and manufacturing responses.
+            </p>
+          </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {[
               {
                 q: 'What contract manufacturing services does HAS Lifesciences provide?',
@@ -576,22 +588,33 @@ export default function Home() {
                 q: 'What compliance and export regulatory dossiers do you support?',
                 a: 'We provide full technical documentation including Batch Manufacturing Records (BMR), Certificates of Analysis (CoA), stability data, and regulatory dossiers compliant with FSSAI, AYUSH, US-FDA cGMP benchmarks, and global health authorities.'
               }
-            ].map((faq, fIdx) => (
-              <details
-                key={fIdx}
-                className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-[#00D2FF] transition-all cursor-pointer open:bg-white/10"
-              >
-                <summary className="font-architekt font-bold text-xl sm:text-2xl text-white flex items-center justify-between list-none">
-                  <span>{faq.q}</span>
-                  <span className="text-[#00D2FF] text-2xl font-light group-open:rotate-45 transition-transform duration-300">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-4 font-telegraf text-slate-300 text-base sm:text-lg leading-relaxed pt-4 border-t border-white/10">
-                  {faq.a}
-                </p>
-              </details>
-            ))}
+            ].map((faq, fIdx) => {
+              const isOpen = openFaqIndex === fIdx;
+              return (
+                <div
+                  key={fIdx}
+                  onClick={() => toggleFaq(fIdx)}
+                  className={`p-8 rounded-3xl border transition-all duration-300 cursor-pointer ${
+                    isOpen
+                      ? 'bg-white/10 border-[#00D2FF] shadow-[0_0_30px_rgba(0,210,255,0.12)]'
+                      : 'bg-white/5 border-white/10 hover:border-white/25 hover:bg-white/[0.08]'
+                  }`}
+                >
+                  <div className="font-architekt font-bold text-xl sm:text-2xl text-white flex items-center justify-between gap-6">
+                    <span className={isOpen ? 'text-[#00D2FF] transition-colors' : 'text-white'}>
+                      {faq.q}
+                    </span>
+                    <span className={`w-8 h-8 shrink-0 rounded-full border flex items-center justify-center text-lg font-light transition-transform duration-300 ${
+                      isOpen ? 'rotate-45 border-[#00D2FF] text-[#00D2FF] bg-[#00D2FF]/15' : 'border-white/30 text-white/70'
+                    }`}>
+                      +
+                    </span>
+                  </div>
+
+                  <TypewriterText text={faq.a} isActive={isOpen} speed={7} />
+                </div>
+              );
+            })}
           </div>
 
         </div>
